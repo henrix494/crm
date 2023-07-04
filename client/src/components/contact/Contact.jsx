@@ -9,16 +9,19 @@ export default function Contact() {
 		e.preventDefault();
 
 		const postData = async () => {
-			const data = await fetch(`/info`, {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					name: name.current.value,
-					phone: phone.current.value,
-				}),
-			});
+			const data = await fetch(
+				`https://crm-git-main-henrix494.vercel.app/info`,
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						name: name.current.value,
+						phone: phone.current.value,
+					}),
+				}
+			);
 			if (data.status === 401) {
 				const resData = await data.json();
 				setError(resData);
