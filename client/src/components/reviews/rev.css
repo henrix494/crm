@@ -1,0 +1,7 @@
+.shadow {
+	box-shadow: 9px 10px 30px -4px rgba(86, 85, 85, 0.488);
+}
+
+.style {
+	transition: all 3s;
+}
