@@ -1,8 +1,13 @@
 const express = require(`express`);
 const { connectToDB } = require(`./utils/mongo`);
 const { User } = require(`./models/userInfo`);
+const cors = require(`cors`);
 const app = express();
-
+app.use(
+	cors({
+		origin: `https://crm-front-lovat.vercel.app/`,
+	})
+);
 app.use(express.json());
 
 app.post("/info", async (req, res) => {
