@@ -16,7 +16,7 @@ app.post("/info", async (req, res) => {
 		if (!name || !phone) {
 			return res.status(401).json("נא למלא את כל הפרטים");
 		}
-		if (phone.length < 10) {
+		if (!phone.length === 10) {
 			return res.status(401).json("מספר פאלאפון לא חוקי");
 		} else {
 			await connectToDB();
