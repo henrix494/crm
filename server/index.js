@@ -5,7 +5,7 @@ const cors = require(`cors`);
 const app = express();
 app.use(
 	cors({
-		origin: `https://crm-front-lovat.vercel.app/`,
+		origin: `*`,
 	})
 );
 app.use(express.json());
