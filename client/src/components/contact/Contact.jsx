@@ -1,10 +1,11 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export default function Contact() {
 	const [error, setError] = useState("");
 	const [upload, setUpLoad] = useState("");
-	const name = useRef(null);
-	const phone = useRef(null);
+	const [name, setName] = useState("");
+	const [phone, setPhone] = useState("");
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
@@ -17,8 +18,8 @@ export default function Contact() {
 						"Content-Type": "application/json",
 					},
 					body: JSON.stringify({
-						name: name.current.value,
-						phone: phone.current.value,
+						name: name,
+						phone: phone,
 					}),
 				}
 			);
@@ -30,22 +31,24 @@ export default function Contact() {
 				const resData = await data.json();
 				setUpLoad(resData);
 				setError("");
+				setName("");
+				setPhone("");
 			}
 		};
 
 		postData();
 	};
 	return (
-		<div className="  relative h-[600px] max-md:flex-col flex justify-around bg-[url('./assets/fotter.png')] bg-cover bg-center  after:contents-[``] after:absolute after:bg-black after:w-[100%] after:h-[100%] after:opacity-60 max-md:after:opacity-60 after:z-40 z-30">
+		<div className="  relative h-[600px] max-md:flex-col items-center  flex justify-around bg-[url('./assets/fotter.png')] bg-cover bg-center  after:contents-[``] after:absolute after:bg-black after:w-[100%] after:h-[100%] after:opacity-60 max-md:after:opacity-60 after:z-40 z-30">
 			<div className=" border-2 border-[white] flex-[0.7] z-[500] "></div>
-			<div className="z-[500] text-white flex-1  text-center">
+			<div className="z-[500] text-white flex-1  text-center flex flex-col items-center justify-center">
 				<h4 className="pt-5  text-4xl max-md:text-2xl">
 					אל תפספסו את המכונה ששיגעה את אסיה
 				</h4>
 				<h4 className="pt-5  text-4xl max-md:text-2xl">
 					השאירו מספר פאלפון לקבלת יותר פרטים
 				</h4>
-				<form className="text-[black] mt-10 " onSubmit={handleSubmit}>
+				<form className="text-[black] mt-10  w-full " onSubmit={handleSubmit}>
 					<div className="mb-5 ">
 						{" "}
 						<input
@@ -53,7 +56,8 @@ export default function Contact() {
 							id="name"
 							name="name"
 							className="w-[32.4%] max-md:w-[57%] rounded-lg mr-2"
-							ref={name}
+							onChange={(e) => setName(e.target.value)}
+							value={name}
 						/>
 						<label htmlFor="name" className="text-right text-[white] text-3xl">
 							:שם
@@ -66,7 +70,10 @@ export default function Contact() {
 							id="phone"
 							name="phone"
 							className="w-[29%] rounded-lg mr-2 max-md:w-[50%]"
-							ref={phone}
+							onChange={(e) => {
+								setPhone(e.target.value);
+							}}
+							value={phone}
 						/>
 						<label htmlFor="name" className="text-right text-[white] text-3xl ">
 							:מספר
@@ -74,7 +81,7 @@ export default function Contact() {
 					</div>
 					<div className="text-[red] text-2xl">{error}</div>
 					<div className="text-[green] text-2xl">{upload}</div>
-					<div className="button-container-2 flex m-auto mt-[15%]">
+					<div className="button-container-2 flex m-auto  mt-[8%] mb-[2%]">
 						<span className="mas"> שלח</span>
 						<button type="submit" name="Hover">
 							שלח{" "}
