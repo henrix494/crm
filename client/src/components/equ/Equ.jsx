@@ -9,27 +9,35 @@ export default function Equ() {
 		<div className="bg-[#1E1E1E] pb-10 ">
 			<h2 className=" text-center text-4xl text-[white] pt-8">מה בא בפנים</h2>
 			<div className="flex gap-[70px] justify-center mt-16 max-md:flex-col max-md:items-center">
-				<div className=" bg-[#D0CFD3] border-2 h-[300px] border-[#F58422] rounded-md w-[300px] relative first ">
-					<img src={imgM} alt="תמונה של מכונת קפה" />
+				<div className="flex gap-10 max-xl:flex-col">
+					<div className=" bg-[#D0CFD3] border-2 h-[300px] border-[#F58422] rounded-md w-[300px] relative first ">
+						<img src={imgM} alt="תמונה של מכונת קפה" />
+					</div>
+					<div className="  border-2 border-[#F58422] rounded-md h-[300px] w-[300px] relative secound ">
+						<img
+							className="h-[100%] w-[100%]"
+							src={tank}
+							alt="תמונה של טנק מים"
+						/>
+					</div>
 				</div>
-				<div className="  border-2 border-[#F58422] rounded-md h-[300px] w-[300px] relative secound ">
-					<img
-						className="h-[100%] w-[100%]"
-						src={tank}
-						alt="תמונה של טנק מים"
-					/>
-				</div>
-				<div className=" border-2 h-[300px] w-[300px] relative third">
-					{" "}
-					<img
-						className="h-[100%] w-[100%]"
-						src={handle}
-						alt="תמונה של ידית לחץ של קפה"
-					/>
-				</div>
-				<div className=" border-2 h-[300px] w-[300px] relative brush">
-					{" "}
-					<img className="h-[100%] w-[100%]" src={brush} alt="תמונה של נקיון" />
+				<div className="flex gap-10 max-xl:flex-col">
+					<div className=" border-2 h-[300px] w-[300px] relative third">
+						{" "}
+						<img
+							className="h-[100%] w-[100%]"
+							src={handle}
+							alt="תמונה של ידית לחץ של קפה"
+						/>
+					</div>
+					<div className=" border-2 h-[300px] w-[300px] relative brush">
+						{" "}
+						<img
+							className="h-[100%] w-[100%]"
+							src={brush}
+							alt="תמונה של נקיון"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

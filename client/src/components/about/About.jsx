@@ -3,7 +3,7 @@ export default function About() {
 	return (
 		<div className=" bg-[#1E1E1E] px-10 pb-10">
 			<div className="flex justify-around pt-20 border-2 pb-10   border-[#F58422] max-md:flex-col max-md:pt-10 max-md:border-none ">
-				<div>
+				<div className="flex justify-center">
 					<img
 						className=" w-[100%] h-[400px]  max-md:max-h-[300px] max-md:w-[300px]  "
 						src={side}

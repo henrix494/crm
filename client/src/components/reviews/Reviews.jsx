@@ -40,7 +40,7 @@ export default function Reviews() {
 		<div className="flex gap-20 justify-center pt-10 pb-5 text-right max-md:flex-col items-center ">
 			<div
 				ref={(ref) => cardRefs.current.push(ref)}
-				className={` ${
+				className={` md:max-xl:hidden ${
 					isCardVisible[0] === true
 						? " translate-x-0 opacity-100 "
 						: "translate-x-[-110%] max-md:translate-x-[-50%] opacity-0"
@@ -51,7 +51,7 @@ export default function Reviews() {
 				<div>
 					<h3 className=" font-bold text-[#666253] mt-1">מכונה מדהימה</h3>
 				</div>
-				<div>
+				<div className=" ">
 					{" "}
 					<article className=" text-[#BAB39E] mt-4">
 						אני מאוד מרוצה ממכונת הקפה, היא מאוד קלה לשימוש ומספקת תוצאות והמחיר
