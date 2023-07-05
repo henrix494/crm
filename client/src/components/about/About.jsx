@@ -4,7 +4,11 @@ export default function About() {
 		<div className=" bg-[#1E1E1E] px-10 pb-10">
 			<div className="flex justify-around pt-20 border-2 pb-10   border-[#F58422] max-md:flex-col max-md:pt-10 max-md:border-none ">
 				<div>
-					<img className="h-[500px]  max-md:h-[50%]" src={side} alt="" />
+					<img
+						className=" w-[100%] h-[400px]  max-md:max-h-[300px] max-md:w-[300px]  "
+						src={side}
+						alt=""
+					/>
 				</div>
 
 				<div className=" text-right text-[white] ">
