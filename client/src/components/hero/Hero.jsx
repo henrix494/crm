@@ -1,6 +1,7 @@
 import { useState } from "react";
 import img from "../../assets/coffe.png";
 import "./hero.css";
+import { Link } from "react-router-dom";
 export default function Hero() {
 	const [isBarHover, setIsBarHover] = useState(false);
 	const [isMilkHover, setIsMilkHover] = useState(false);
@@ -38,12 +39,12 @@ export default function Hero() {
 						</p>
 					</div>
 				</div>
-				<div className="button-container-2">
+				<Link target="__blank" to={"/Checkout"} className="button-container-2">
 					<span className="mas"> קנה עכשיו</span>
 					<button type="button" name="Hover">
 						קנה עכשיו
 					</button>
-				</div>
+				</Link>
 			</div>
 			<div className=" z-50  ">
 				{" "}
