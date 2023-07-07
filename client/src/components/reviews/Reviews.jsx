@@ -43,7 +43,7 @@ export default function Reviews() {
 				className={` md:max-xl:hidden ${
 					isCardVisible[0] === true
 						? " translate-x-0 opacity-100 "
-						: "translate-x-[-110%] max-md:translate-x-[-50%] opacity-0"
+						: "translate-x-[-100%] max-md:translate-x-[-50%] opacity-0"
 				}  h-[300px] style w-[280px] bg-[#FFF5D6] p-8 text-[white] rounded-md shadow `}>
 				<div>
 					<img className="w-[50px]" src={svg} alt="" />
