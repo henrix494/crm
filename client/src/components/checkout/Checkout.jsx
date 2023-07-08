@@ -126,17 +126,16 @@ export default function Checkout() {
 					</div>
 				</div>
 			</div>
-			<div
-				ref={carouselRef}
-				className=" h-[480px] w-[500px] max-md:w-[100vw] col-span-1 relative ">
+			<div className=" h-[480px] w-[500px] max-md:w-[100vw] col-span-1 relative ">
 				<button
 					className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-200 text-gray-800 px-2 py-1 rounded-md"
-					onClick={goToPreviousImage}
-					onTouchStart={handleTouchStart}
-					onTouchMove={handleTouchMove}>
+					onClick={goToPreviousImage}>
 					קודם
 				</button>
 				<img
+					ref={carouselRef}
+					onTouchStart={handleTouchStart}
+					onTouchMove={handleTouchMove}
 					className={`h-full w-full object-cover max-md:w-[100%] ] ${
 						currentIndex === 4 && ` object-fit`
 					}`}
