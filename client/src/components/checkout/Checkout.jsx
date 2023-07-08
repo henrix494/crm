@@ -4,12 +4,13 @@ import tank from "../../assets/1688144133605.png";
 import handle from "../../assets/handle.jpg";
 import zoompng from "../../assets/zoompng.png";
 import { useState } from "react";
-
 export default function Checkout() {
 	const imageSrc = [img, imgM, tank, handle, zoompng];
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [readMore, setReadMore] = useState(false);
-
+	const [numbere, setNumber] = useState(1499);
+	const [items, setItems] = useState(1);
+	const [dis, setDis] = useState(2000);
 	const goToNextImage = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % imageSrc.length);
 	};
@@ -18,6 +19,22 @@ export default function Checkout() {
 		setCurrentIndex((prevIndex) =>
 			prevIndex === 0 ? imageSrc.length - 1 : prevIndex - 1
 		);
+	};
+
+	const addNumber = () => {
+		setItems((prev) => {
+			return prev + 1;
+		});
+		setNumber((prev) => prev + 1499);
+		setDis((prev) => prev + 2000);
+	};
+
+	const minusNumber = () => {
+		setItems((prev) => {
+			return prev - 1;
+		});
+		setNumber((prev) => prev - 1499);
+		setDis((prev) => prev - 2000);
 	};
 
 	return (
@@ -48,6 +65,45 @@ export default function Checkout() {
 						className=" text-[#6d6def] pt-2">
 						קרא עוד
 					</button>
+				</div>
+				<div className=" text-right mt-10 ">
+					<div className="flex justify-end items-center">
+						<div className="mr-[17vw]">
+							<p className=" underline font-bold text-2xl">:פרטים נוספים</p>
+						</div>
+						<h3 className=" font-bold text-5xl ">
+							<span className=" font-normal text-xl line-through text-[#797676]	">
+								₪{dis.toLocaleString()}
+							</span>{" "}
+							₪{numbere.toLocaleString()}
+						</h3>
+					</div>
+					<div className="flex justify-end  mt-10 text-3xl gap-2 items-center ">
+						<div className="button-container-2 mr-8 ">
+							<span className="mas"> קנה עכשיו</span>
+							<button type="button" name="Hover">
+								קנה עכשיו
+							</button>
+						</div>
+						<div>
+							<button
+								onClick={addNumber}
+								className=" text-xl rounded-full border-2 px-2 py-2">
+								+
+							</button>
+						</div>
+						<div>
+							<p>{items}</p>
+						</div>
+						<div>
+							<button
+								onClick={minusNumber}
+								disabled={items === 1}
+								className=" text-xl rounded-full border-2 px-2 py-2">
+								&#8722;
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div className=" h-[480px] w-[500px] max-md:w-[100vw] col-span-1 relative">

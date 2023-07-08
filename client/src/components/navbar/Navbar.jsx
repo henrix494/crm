@@ -1,8 +1,45 @@
-import svgLogo from "../../assets/logo-no-background.svg";
+import { useState, useEffect } from "react";
+
 export default function Navbar() {
+	const [indexx, setIndex] = useState(0);
+	const [isAnimating, setIsAnimating] = useState(false);
+	const tests = [
+		"משלוח חינם עד הבית",
+		"הנחה חד פעמית של 20%",
+		"חויית קפה מיוחדת",
+	];
+
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setIsAnimating(true);
+			setTimeout(() => {
+				setIndex((prevIndex) => (prevIndex + 1) % tests.length);
+				setIsAnimating(false);
+			}, 1000);
+		}, 4000);
+
+		return () => clearInterval(timer); // Cleanup the timer on unmount
+	}, [indexx, tests.length]);
+
+	console.log(indexx);
 	return (
-		<div className="   z-[9000] w-full ">
-			<img className="w-[130px]" src={svgLogo} alt="" />
+		<div className="relative z-[9000] w-full flex justify-center items-center h-full text-[white]">
+			<div className="flex justify-center overflow-hidden">
+				{tests.map((text, i) => {
+					const translateX = indexx === i ? "0px" : "-100%";
+					const opacity = indexx === i ? "1" : "0";
+					const transitionDelay = isAnimating ? `${i * 0.3}s` : "0s";
+
+					return (
+						<p
+							key={i}
+							className={`absolute top-1/2 transition-all duration-1000 ease-in-out translate-y-[-50%] translate-x-${translateX} opacity-${opacity}`}
+							style={{ transitionDelay }}>
+							{text}
+						</p>
+					);
+				})}
+			</div>
 		</div>
 	);
 }

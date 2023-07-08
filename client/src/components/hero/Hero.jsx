@@ -10,7 +10,7 @@ export default function Hero() {
 
 	return (
 		<div className="   relative  flex md:justify-around max-md:flex-col max-md:justify-center   bg-[url('./assets/henrix_a_coffee_bean_explosion_commercial_high_quality_2e757a3d-c5a3-49d5-b5d1-0ca72d3a6dcf.png')] bg-cover bg-no-repeat bg-center after:contents-[``] after:absolute after:bg-black after:w-[100%] after:h-[100%] after:opacity-80 max-md:after:opacity-60 after:z-40 z-30 ">
-			<div className="  max-md:order-2 z-50 text-[white]  py-[4%] self-start flex flex-col  max-md:items-center max-md:text-center">
+			<div className=" text-right  max-md:order-2 z-50 text-[white]  py-[4%] self-start flex flex-col  max-md:items-center max-md:text-center">
 				<div className=" border-b-2 border-[#F58422] pb-4">
 					<h3 className="text-4xl font-bold">החוויה האולטימטיבית של הקפה</h3>
 					<p className=" text-[#F58422] font-bold text-3xl mt-4">
@@ -34,12 +34,15 @@ export default function Hero() {
 						</p>
 						<p className=" text-3xl">
 							{" "}
-							<span className=" line-through pr-4	text-xl"> 2000 </span> רק ב -
-							1499 ש"ח
+							<span className=" line-through pr-4	text-xl">₪ 2,000 </span> ₪רק ב
+							- 1,499
 						</p>
 					</div>
 				</div>
-				<Link target="__blank" to={"/Checkout"} className="button-container-2">
+				<Link
+					target="__blank"
+					to={"/Checkout"}
+					className="button-container-2 self-end max-md:self-center mt-[10%]">
 					<span className="mas"> קנה עכשיו</span>
 					<button type="button" name="Hover">
 						קנה עכשיו

@@ -10,9 +10,9 @@ import Navbar from "./components/navbar/Navbar";
 function App() {
 	return (
 		<>
-			{/* <div className=" fixed top-0 w-full  h-[70px] bg-[white] z-[5000000]">
+			<div className=" fixed top-0 w-full  h-[35px] bg-[#655032] z-[5000000]">
 				<Navbar />
-			</div> */}
+			</div>
 
 			<Routes>
 				<Route
