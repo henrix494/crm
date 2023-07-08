@@ -21,7 +21,6 @@ export default function Navbar() {
 		return () => clearInterval(timer); // Cleanup the timer on unmount
 	}, [indexx, tests.length]);
 
-	console.log(indexx);
 	return (
 		<div className="relative z-[9000] w-full flex justify-center items-center h-full text-[white]">
 			<div className="flex justify-center overflow-hidden">

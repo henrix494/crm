@@ -3,7 +3,8 @@ import imgM from "../../assets/Gemilai-CRM3605-2022pp.png";
 import tank from "../../assets/1688144133605.png";
 import handle from "../../assets/handle.jpg";
 import zoompng from "../../assets/zoompng.png";
-import { useState } from "react";
+import { useState, useRef } from "react";
+
 export default function Checkout() {
 	const imageSrc = [img, imgM, tank, handle, zoompng];
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,6 +12,9 @@ export default function Checkout() {
 	const [numbere, setNumber] = useState(1499);
 	const [items, setItems] = useState(1);
 	const [dis, setDis] = useState(2000);
+	const carouselRef = useRef(null);
+	const startXRef = useRef(null);
+
 	const goToNextImage = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % imageSrc.length);
 	};
@@ -35,6 +39,22 @@ export default function Checkout() {
 		});
 		setNumber((prev) => prev - 1499);
 		setDis((prev) => prev - 2000);
+	};
+
+	const handleTouchStart = (e) => {
+		startXRef.current = e.touches[0].clientX;
+	};
+
+	const handleTouchMove = (e) => {
+		const diff = startXRef.current - e.touches[0].clientX;
+		console.log(diff);
+		if (diff > 50) {
+			// Swipe left
+			goToNextImage();
+		} else if (diff < -50) {
+			// Swipe right
+			goToPreviousImage();
+		}
 	};
 
 	return (
@@ -106,10 +126,14 @@ export default function Checkout() {
 					</div>
 				</div>
 			</div>
-			<div className=" h-[480px] w-[500px] max-md:w-[100vw] col-span-1 relative">
+			<div
+				ref={carouselRef}
+				className=" h-[480px] w-[500px] max-md:w-[100vw] col-span-1 relative ">
 				<button
 					className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-200 text-gray-800 px-2 py-1 rounded-md"
-					onClick={goToPreviousImage}>
+					onClick={goToPreviousImage}
+					onTouchStart={handleTouchStart}
+					onTouchMove={handleTouchMove}>
 					קודם
 				</button>
 				<img
