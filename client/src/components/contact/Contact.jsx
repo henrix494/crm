@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./cos.css";
+import anotherBean from "../../assets/anotherbean.png";
+import bean from "../../assets/bean.png";
 import { Link } from "react-router-dom";
 export default function Contact() {
 	const [error, setError] = useState("");
@@ -46,83 +48,107 @@ export default function Contact() {
 		postData();
 	};
 	return (
-		<div className="  relative h-[600px] max-md:h-full max-md:flex-col  flex justify-around bg-[url('./assets/fotter.png')] bg-cover bg-center  after:contents-[``] after:absolute after:bg-black after:w-[100%] after:h-[100%] after:opacity-60 max-md:after:opacity-60 after:z-40 z-30">
-			<div className="  gap-5  text-white   text-center flex flex-col items-center justify-center  flex-[0.7] z-[500] ">
-				<div>
-					<h3 className="  text-4xl max-md:text-6xl pb-4">קנו עכשיו</h3>
-				</div>
-				<div>
-					{" "}
-					<h2 className="text-2xl">הנחה חד פעמית של 20% </h2>
-				</div>
-				<div className=" text-3xl">
-					<h2>רק ב 1,499 במקום ב 2,000 שקלים</h2>
-				</div>
-				<Link
-					to={"/Checkout"}
-					target="__blank"
-					className="button-container-2 flex m-auto  mt-[8%] mb-[2%]">
-					<span className="mas"> קנה עכשיו</span>
-					<button type="submit" name="Hover">
-						קנה עכשיו{" "}
-					</button>
-				</Link>
-			</div>
-			<div className="z-[500] text-white flex-1  text-center flex flex-col items-center justify-center gap-5 mt-10 ">
-				<h4 className="  text-4xl max-md:text-2xl">
-					אל תפספסו את המכונה ששיגעה את אסיה
-				</h4>
-				<h4 className="  text-4xl max-md:text-2xl">
-					השאירו מספר פאלפון לקבלת יותר פרטים
-				</h4>
-				<form className="text-[black]   w-full " onSubmit={handleSubmit}>
-					<div className="mb-5 ">
-						{" "}
-						<input
-							type="text"
-							id="name"
-							name="name"
-							className="w-[32.4%] max-md:w-[57%] rounded-lg mr-2"
-							onChange={(e) => setName(e.target.value)}
-							value={name}
-						/>
-						<label htmlFor="name" className="text-right text-[white] text-3xl">
-							:שם
-						</label>
-					</div>
+		<div className=" relative h-max  bg-[#000000] mt-[12rem] text-[white] pb-20">
+			<div className=" text-black absolute w-[80%] max-lg:w-[90vw] h-[200px]  top-[-5rem] left-1/2 translate-x-[-50%] rounded-3xl bg-[#FFF5D6]">
+				<div className=" relative">
 					<div>
-						{" "}
-						<input
-							type="number"
-							id="phone"
-							name="phone"
-							className="w-[29%] rounded-lg mr-2 max-md:w-[50%]"
-							onChange={(e) => {
-								setPhone(e.target.value);
-							}}
-							value={phone}
+						<img
+							src={bean}
+							className=" absolute w-[200px] max-lg:w-[100px] rotate-[60deg] top-5 left-[10%] opacity-70 "
+							alt=""
+						/>{" "}
+						<img
+							src={anotherBean}
+							className=" absolute w-[200px] rotate-[20deg] max-lg:w-[100px] top-0 right-[10%] opacity-70"
+							alt=""
 						/>
-						<label htmlFor="name" className="text-right text-[white] text-3xl ">
-							:מספר
-						</label>
-					</div>{" "}
-					{isLoading && (
-						<div className="lds-ellipsis ">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
+					</div>
+					<h4 className=" text-center mt-10 text-3xl font-bold max-lg:text-2xl">
+						קנה עכשיו בהנחה חד פעמית של 20%
+					</h4>{" "}
+					<div className="   flex justify-center items-center mt-5 ">
+						{" "}
+						<Link
+							target="__blank"
+							to={"/Checkout"}
+							className="button-container-2  ">
+							<span className="mas"> קנה עכשיו</span>
+							<button type="button" name="Hover">
+								קנה עכשיו
+							</button>
+						</Link>
+					</div>
+				</div>
+			</div>
+			<div className="flex h-full pt-[9%] flex-col items-center max-lg:pt-[15%]">
+				<div>
+					<h3 className="text-7xl font-bold max-lg:text-[2rem] max-lg:mt-[30%]">
+						צור קשר לקבלת מידע
+					</h3>
+				</div>
+				<div className="mt-10">
+					<form
+						action=""
+						className="flex flex-col gap-5 items-center"
+						onSubmit={handleSubmit}>
+						{" "}
+						<div className="">
+							<input
+								className=" rounded-lg text-right w-[429px] max-lg:w-[256px]   h-[30px] px-5"
+								type="text"
+								id="name"
+								name="name"
+								onChange={(e) => setName(e.target.value)}
+							/>
+							<label htmlFor="name" className=" text-3xl font-bold">
+								{" "}
+								:שם
+							</label>
 						</div>
-					)}
-					<div className="text-[red] text-2xl">{error}</div>
-					<div className="text-[green] text-2xl">{upload}</div>
-					<div className="button-container-2 flex m-auto mt-[1%]   ">
-						<span className="mas"> שלח</span>
-						<button type="submit" name="Hover">
-							שלח{" "}
-						</button>
-					</div>{" "}
-				</form>
+						<div>
+							{" "}
+							<input
+								className=" rounded-lg text-right w-[400px] h-[30px] px-5  max-lg:w-[230px] "
+								type="text"
+								id="phone"
+								name="phone"
+								onChange={(e) => setPhone(e.target.value)}
+							/>
+							<label htmlFor="phone" className=" text-3xl font-bold">
+								{" "}
+								:מספר
+							</label>
+						</div>
+						<div className=" self-center">
+							{" "}
+							<div className=" text-center  text-[red] font-bold mb-4 text-2xl max-lg:mr-0 ">
+								{error}
+							</div>
+							<div className=" text-center  text-[green] font-bold mb-4 text-2xl max-lg:mr-0">
+								{upload}
+							</div>
+							<div className="flex justify-center   max-lg:mr-0">
+								{" "}
+								{isLoading && (
+									<div className="lds-ellipsis ">
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+									</div>
+								)}
+							</div>
+							<button
+								target="__blank"
+								className="button-container-2  w-[400px] max-lg:w-[100vw] mt-[1.5rem] ">
+								<span className="mas"> שלח</span>
+								<button type="button" name="Hover">
+									שלח
+								</button>
+							</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	);
