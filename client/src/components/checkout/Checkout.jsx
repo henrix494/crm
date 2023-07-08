@@ -3,7 +3,7 @@ import imgM from "../../assets/Gemilai-CRM3605-2022pp.png";
 import tank from "../../assets/1688144133605.png";
 import handle from "../../assets/handle.jpg";
 import zoompng from "../../assets/zoompng.png";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 export default function Checkout() {
 	const imageSrc = [img, imgM, tank, handle, zoompng];
@@ -12,8 +12,6 @@ export default function Checkout() {
 	const [numbere, setNumber] = useState(1499);
 	const [items, setItems] = useState(1);
 	const [dis, setDis] = useState(2000);
-	const carouselRef = useRef(null);
-	const startXRef = useRef(null);
 
 	const goToNextImage = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % imageSrc.length);
@@ -39,22 +37,6 @@ export default function Checkout() {
 		});
 		setNumber((prev) => prev - 1499);
 		setDis((prev) => prev - 2000);
-	};
-
-	const handleTouchStart = (e) => {
-		startXRef.current = e.touches[0].clientX;
-	};
-
-	const handleTouchMove = (e) => {
-		const diff = startXRef.current - e.touches[0].clientX;
-		console.log(diff);
-		if (diff > 50) {
-			// Swipe left
-			goToNextImage();
-		} else if (diff < -50) {
-			// Swipe right
-			goToPreviousImage();
-		}
 	};
 
 	return (
@@ -133,9 +115,6 @@ export default function Checkout() {
 					קודם
 				</button>
 				<img
-					ref={carouselRef}
-					onTouchStart={handleTouchStart}
-					onTouchMove={handleTouchMove}
 					className={`h-full w-full object-cover max-md:w-[100%] ] ${
 						currentIndex === 4 && ` object-fit`
 					}`}
