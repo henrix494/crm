@@ -41,17 +41,19 @@ export default function Checkout() {
 
 	return (
 		<div className="pt-[8%] grid grid-cols-5 max-md:flex max-md:flex-col ">
-			<div className=" mr-[10%] text-right  col-span-3 max-md:order-2 max-md:mt-[35%] ">
-				<div className=" border-b-2 pb-8 ">
-					<h2 className=" font-bold text-4xl">CRM 3605 מכונת אספרסו </h2>
-					<p className="pt-3 text-xl">
+			<div className=" mr-[10%] text-right  col-span-3 max-md:order-2 max-md:mt-[35%] max-md:w-full ">
+				<div className=" border-b-2 pb-8  ">
+					<h2 className=" font-bold text-4xl max-md:pr-4">
+						CRM 3605 מכונת אספרסו{" "}
+					</h2>
+					<p className="pt-3 text-xl max-md:pr-4">
 						הינה מכונה מקצועית בעלת מפרט טכני כמו של מכונות הקפה הקיימות בבתי
 						הקפה, CRM 3605 מכונת ה{" "}
 					</p>
-					<p className="pt-2 text-xl">
+					<p className="pt-2 text-xl max-md:pr-4">
 						.המכונת הקפה המושלמת לבית שלכם ולבתי קפה במחיר מטורף
 					</p>
-					<div className={`${readMore ? "block" : "hidden"}`}>
+					<div className={`${readMore ? "block" : "hidden"} max-md:pr-4`}>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
 							aliquid minima, temporibus necessitatibus placeat expedita
@@ -59,16 +61,25 @@ export default function Checkout() {
 							laboriosam ut quos? Debitis a nam illum?
 						</p>
 					</div>
-
-					<button
-						onClick={() => {
-							setReadMore((prev) => !prev);
-						}}
-						className=" text-[#6d6def] pt-2">
-						קרא עוד
-					</button>
+					{!readMore ? (
+						<button
+							onClick={() => {
+								setReadMore((prev) => !prev);
+							}}
+							className=" text-[#6d6def] pt-2 max-md:mr-4">
+							קרא עוד
+						</button>
+					) : (
+						<button
+							onClick={() => {
+								setReadMore((prev) => !prev);
+							}}
+							className=" text-[#6d6def] pt-2 max-md:mr-4">
+							סגור
+						</button>
+					)}
 				</div>
-				<div className=" text-right mt-10 ">
+				<div className=" text-right mt-10 max-md:pr-4">
 					<div className="flex justify-end items-center">
 						<div className="mr-[17vw]">
 							<p className=" underline font-bold text-2xl">:פרטים נוספים</p>

@@ -9,8 +9,8 @@ export default function Hero() {
 	const [isHandleHover, setIsHandleHover] = useState(false);
 
 	return (
-		<div className="   relative  flex md:justify-around max-md:flex-col max-md:justify-center   bg-[url('./assets/henrix_a_coffee_bean_explosion_commercial_high_quality_2e757a3d-c5a3-49d5-b5d1-0ca72d3a6dcf.png')] bg-cover bg-no-repeat bg-center after:contents-[``] after:absolute after:bg-black after:w-[100%] after:h-[100%] after:opacity-80 max-md:after:opacity-60 after:z-40 z-30 ">
-			<div className=" text-right  max-md:order-2 z-50 text-[white]  py-[4%] self-start flex flex-col  max-md:items-center max-md:text-center">
+		<div className="   relative  flex md:justify-around max-md:flex-col max-md:justify-center   bg-[url('./assets/henrix_a_coffee_bean_explosion_commercial_high_quality_2e757a3d-c5a3-49d5-b5d1-0ca72d3a6dcf.png')] bg-cover bg-no-repeat bg-center after:contents-[``] after:absolute after:bg-black after:w-[100%] after:h-[100%] after:opacity-80 max-md:after:opacity-70 after:z-40 z-30 ">
+			<div className=" text-right  max-md:order-2 z-50 text-[white]  py-[6%] self-start flex flex-col  max-md:items-center max-md:text-center">
 				<div className=" border-b-2 border-[#F58422] pb-4">
 					<h3 className="text-4xl font-bold">החוויה האולטימטיבית של הקפה</h3>
 					<p className=" text-[#F58422] font-bold text-3xl mt-4">

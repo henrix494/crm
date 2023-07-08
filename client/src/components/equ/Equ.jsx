@@ -6,8 +6,10 @@ import brush from "../../assets/brush.jpg";
 import "./equ.css";
 export default function Equ() {
 	return (
-		<div className="bg-[#1E1E1E] pb-10 ">
-			<h2 className=" text-center text-4xl text-[white] pt-8">מה בא בפנים</h2>
+		<div className="bg-[#F4EDE4] pb-10 ">
+			<h2 className=" text-center text-5xl text-[black] pt-8 font-bold">
+				מה בא בפנים
+			</h2>
 			<div className="flex gap-[70px] justify-center mt-16 max-md:flex-col max-md:items-center">
 				<div className="flex gap-10 max-xl:flex-col">
 					<div className=" bg-[#D0CFD3] border-2 h-[300px] border-[#F58422] rounded-md w-[300px] relative first ">
