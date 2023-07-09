@@ -10,7 +10,7 @@ import Navbar from "./components/navbar/Navbar";
 import ReactGA from "react-ga";
 
 function App() {
-	const TRACKING_ID = "G-HSZC51BVVN"; // YOUR_OWN_TRACKING_ID
+	const TRACKING_ID = ""; // YOUR_OWN_TRACKING_ID
 	ReactGA.initialize(TRACKING_ID);
 	return (
 		<>
