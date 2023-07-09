@@ -8,6 +8,8 @@ import masterCard from "../../assets/mastercard.png";
 import isracard from "../../assets/isracard.jpg";
 import mainC from "../../assets/Gemilai-CRM3605-2022pp.png";
 import paypal from "../../assets/paypal.png";
+import grinder from "../../assets/burr.jpg";
+
 import { useState } from "react";
 
 export default function Checkout() {
@@ -50,11 +52,11 @@ export default function Checkout() {
 				<div className=" mr-[10%] text-right  col-span-3 max-lg:order-2 max-lg:mt-[35%] max-lg:w-full   ">
 					<div className=" border-b-2 pb-8  ">
 						<h2 className=" font-bold text-4xl max-md:pr-4">
-							CRM 3605 מכונת אספרסו{" "}
+							BRL 3605 מכונת אספרסו{" "}
 						</h2>
 						<p className="pt-3 text-xl max-md:pr-4">
 							הינה מכונה מקצועית בעלת מפרט טכני כמו של מכונות הקפה הקיימות בבתי
-							הקפה, CRM 3605 מכונת ה{" "}
+							הקפה, BRL 3605 מכונת ה{" "}
 						</p>
 						<p className="pt-2 text-xl max-md:pr-4">
 							.המכונת הקפה המושלמת לבית שלכם ולבתי קפה במחיר מטורף
@@ -226,8 +228,8 @@ export default function Checkout() {
 							<p>+</p>
 						</div>{" "}
 						<img
-							className="w-[20%] max-lg:w-[30%] border-2"
-							src={mainC}
+							className="w-[20%]  max-lg:w-[30%] border-2    "
+							src={grinder}
 							alt=""
 						/>
 					</div>

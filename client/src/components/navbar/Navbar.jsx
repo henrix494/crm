@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
+import home from "../../assets/home.svg";
+import info from "../../assets/info.svg";
 export default function Navbar() {
 	const [indexx, setIndex] = useState(0);
 	const [isAnimating, setIsAnimating] = useState(false);
@@ -13,6 +15,7 @@ export default function Navbar() {
 		const timer = setInterval(() => {
 			setIsAnimating(true);
 			setTimeout(() => {
+				console.log(window.location.pathname);
 				setIndex((prevIndex) => (prevIndex + 1) % tests.length);
 				setIsAnimating(false);
 			}, 1000);
@@ -22,7 +25,29 @@ export default function Navbar() {
 	}, [indexx, tests.length]);
 
 	return (
-		<div className="relative z-[9000] w-full flex justify-center items-center h-full text-[white]">
+		<div className="relative z-[9000] w-full flex justify-between items-center h-full text-[white]">
+			<div className="pl-10 max-lg:pl-2 relative  ">
+				{" "}
+				{window.location.pathname === "/Checkout" ? (
+					<Link to={"/#info"}>
+						<img
+							className="w-[2rem] max-lg:w-6 cursor-pointer"
+							src={info}
+							alt=""
+						/>
+					</Link>
+				) : (
+					<a href="#info">
+						{" "}
+						<img
+							className="w-[2rem] max-lg:w-6 cursor-pointer"
+							src={info}
+							alt=""
+						/>
+					</a>
+				)}
+			</div>
+
 			<div className="flex justify-center overflow-hidden">
 				{tests.map((text, i) => {
 					const translateX = indexx === i ? "0px" : "-100%";
@@ -38,6 +63,11 @@ export default function Navbar() {
 						</p>
 					);
 				})}
+			</div>
+			<div className="pr-10 max-lg:pr-2 ">
+				<Link to="/">
+					<img className="w-[2rem] max-lg:w-6" src={home} alt="" />
+				</Link>
 			</div>
 		</div>
 	);

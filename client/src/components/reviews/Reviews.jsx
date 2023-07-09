@@ -75,18 +75,18 @@ export default function Reviews() {
 					<img className="w-[50px]" src={svg} alt="" />
 				</div>
 				<div>
-					<h3 className=" font-bold text-[#666253] mt-1">מכונה מדהימה</h3>
+					<h3 className=" font-bold text-[#666253] mt-1">הופתעתי לטובה</h3>
 				</div>
 				<div>
 					{" "}
 					<article className=" text-[#BAB39E] mt-4">
-						אני מאוד מרוצה ממכונת הקפה, היא מאוד קלה לשימוש ומספקת תוצאות והמחיר
-						מאוד זול!
+						קניתי את המכונה לעסק , המכונת קפה הזאת חסכה לי הרבה כסף והלקוחות
+						יצאו מאוד מרוצים
 					</article>
 				</div>
 				<div>
 					<h4 className="text-[#666253] mt-4 font-extrabold text-xl">
-						מוריס קלארק
+						משה וייסרמן
 					</h4>
 				</div>
 			</div>
@@ -101,18 +101,18 @@ export default function Reviews() {
 					<img className="w-[50px]" src={svg} alt="" />
 				</div>
 				<div>
-					<h3 className=" font-bold text-[#666253] mt-1">מכונה מדהימה</h3>
+					<h3 className=" font-bold text-[#666253] mt-1">כחובבן קפה</h3>
 				</div>
 				<div>
 					{" "}
 					<article className=" text-[#BAB39E] mt-4">
-						אני מאוד מרוצה ממכונת הקפה, היא מאוד קלה לשימוש ומספקת תוצאות והמחיר
-						מאוד זול!
+						כמישו שרק התחיל להתעסק במכונות ידניות המכונה הזאת הייתה מושלמת
+						בישבילי. מאוד קלה לתיפעול
 					</article>
 				</div>
 				<div>
 					<h4 className="text-[#666253] mt-4 font-extrabold text-xl">
-						מוריס קלארק
+						בוריס קגנמן
 					</h4>
 				</div>
 			</div>
@@ -127,18 +127,18 @@ export default function Reviews() {
 					<img className="w-[50px]" src={svg} alt="" />
 				</div>
 				<div>
-					<h3 className=" font-bold text-[#666253] mt-1">מכונה מדהימה</h3>
+					<h3 className=" font-bold text-[#666253] mt-1">לעצמי ולי</h3>
 				</div>
 				<div>
 					{" "}
 					<article className=" text-[#BAB39E] mt-4">
-						אני מאוד מרוצה ממכונת הקפה, היא מאוד קלה לשימוש ומספקת תוצאות והמחיר
-						מאוד זול!
+						קניתי את המכונה והתלבטתי ביגלל המחיר. אני כבר משתמש במכונה הזאת יותר
+						משנה והקפה עדיין מאוד טעים
 					</article>
 				</div>
 				<div>
 					<h4 className="text-[#666253] mt-4 font-extrabold text-xl">
-						מוריס קלארק
+						ישראל בוחבוט
 					</h4>
 				</div>
 			</div>

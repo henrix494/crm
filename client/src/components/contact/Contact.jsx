@@ -63,7 +63,9 @@ export default function Contact() {
 							alt=""
 						/>
 					</div>
-					<h4 className=" text-center mt-10 text-3xl font-bold max-lg:text-2xl">
+					<h4
+						id="info"
+						className=" text-center mt-10 text-3xl font-bold max-lg:text-2xl">
 						קנה עכשיו בהנחה חד פעמית של 20%
 					</h4>{" "}
 					<div className="   flex justify-center items-center mt-5 ">
