@@ -94,9 +94,9 @@ export default function Contact() {
 						className="flex flex-col gap-5 items-center"
 						onSubmit={handleSubmit}>
 						{" "}
-						<div className="">
+						<div className=" border-b-[white] border-b-2">
 							<input
-								className=" rounded-lg text-right w-[429px] max-lg:w-[256px]   h-[30px] px-5"
+								className="focus:outline-none rounded-lg text-right w-[429px] max-lg:w-[256px] focus:border-none active:border-none border-b-[white]  bg-black  h-[30px] px-5"
 								type="text"
 								id="name"
 								name="name"
@@ -107,10 +107,10 @@ export default function Contact() {
 								:שם
 							</label>
 						</div>
-						<div>
+						<div className="border-b-[white] border-b-2">
 							{" "}
 							<input
-								className=" rounded-lg text-right w-[400px] h-[30px] px-5  max-lg:w-[230px] "
+								className=" rounded-lg text-right w-[400px] bg-black focus:outline-none h-[30px] px-5  max-lg:w-[230px] "
 								type="text"
 								id="phone"
 								name="phone"
