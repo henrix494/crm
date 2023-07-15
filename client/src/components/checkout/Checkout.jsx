@@ -9,16 +9,34 @@ import isracard from "../../assets/isracard.jpg";
 import mainC from "../../assets/Gemilai-CRM3605-2022pp.png";
 import paypal from "../../assets/paypal.png";
 import grinder from "../../assets/burr.jpg";
+import doble from "../../assets/doble.png";
+
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
+import { increment } from "../../features/ItemCountReducer";
+import { decrement } from "../../features/ItemCountReducer";
+import { addPrice } from "../../features/ItemCountReducer";
+import { minusPrice } from "../../features/ItemCountReducer";
+import { secondItemPrice } from "../../features/ItemCountReducer";
 
+import { setImg } from "../../features/itemDes";
+import { setTitle } from "../../features/itemDes";
+import { setDes } from "../../features/itemDes";
+
+import "./style.css";
 export default function Checkout() {
 	const imageSrc = [img, imgM, tank, handle, zoompng];
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [readMore, setReadMore] = useState(false);
-	const [numbere, setNumber] = useState(1499);
-	const [items, setItems] = useState(1);
 	const [dis, setDis] = useState(2000);
+	const counterValue = useSelector((state) => state.counter.value);
+	const IMGValue = useSelector((state) => state.img.value);
+	const priceCounter = useSelector((state) => state.counter.price);
+
+	const dispatch = useDispatch();
 
 	const goToNextImage = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % imageSrc.length);
@@ -31,23 +49,19 @@ export default function Checkout() {
 	};
 
 	const addNumber = () => {
-		setItems((prev) => {
-			return prev + 1;
-		});
-		setNumber((prev) => prev + 1499);
+		dispatch(increment());
+		dispatch(addPrice());
 		setDis((prev) => prev + 2000);
 	};
 
 	const minusNumber = () => {
-		setItems((prev) => {
-			return prev - 1;
-		});
-		setNumber((prev) => prev - 1499);
+		dispatch(decrement());
+		dispatch(minusPrice());
 		setDis((prev) => prev - 2000);
 	};
 
 	return (
-		<div className="">
+		<div>
 			<div className="pt-[8%] grid grid-cols-5 max-lg:flex max-lg:flex-col   ">
 				<div className=" mr-[10%] text-right  col-span-3 max-lg:order-2 max-lg:mt-[35%] max-lg:w-full   ">
 					<div className=" border-b-2 pb-8  ">
@@ -87,7 +101,7 @@ export default function Checkout() {
 							</button>
 						)}
 					</div>
-					<div className=" text-right mt-10 max-md:pr-4 max-lg:flex  max-lg:flex-col">
+					<div className=" text-right mt-10 max-md:pr-4 max-lg:flex  max-lg:flex-col ">
 						<div className="flex justify-end items-center  max-lg:flex-col ">
 							<div className="lg:mr-[17vw] max-lg:pb-5">
 								<div>
@@ -117,10 +131,10 @@ export default function Checkout() {
 								<span className=" font-normal text-xl line-through text-[#797676]	">
 									₪{dis.toLocaleString()}
 								</span>{" "}
-								₪{numbere.toLocaleString()}
+								₪{priceCounter.toLocaleString()}
 							</h3>
 						</div>
-						<div className="flex justify-between mt-10 text-3xl gap-2 items-center   pb-28 max-lg:flex-col">
+						<div className="flex justify-between mt-10 text-3xl gap-2 items-center   pb-28 max-lg:flex-col ">
 							<div className=" border-t-2 w-full self-start text-left mr-20 border-b-2 h-[48px] px-10">
 								<div className="flex items-center max-lg:justify-center gap-5">
 									<div>
@@ -139,12 +153,23 @@ export default function Checkout() {
 							</div>
 							<div className="flex items-center gap-2 max-lg:mt-[2rem] ">
 								{" "}
-								<div className="button-container-2 mr-8  ">
+								<Link
+									to={"/Bill"}
+									onClick={() => {
+										dispatch(setImg(imgM));
+										dispatch(setTitle("BRL 3605 מכונת אספרסו"));
+										dispatch(
+											setDes(
+												".המכונת הקפה המושלמת לבית שלכם ולבתי קפה במחיר מטורף"
+											)
+										);
+									}}
+									className="button-container-2 mr-8  ">
 									<span className="mas"> קנה עכשיו</span>
 									<button type="button" name="Hover">
 										קנה עכשיו
 									</button>
-								</div>
+								</Link>
 								<div>
 									<button
 										onClick={addNumber}
@@ -153,12 +178,12 @@ export default function Checkout() {
 									</button>
 								</div>
 								<div>
-									<p>{items}</p>
+									<p>{counterValue}</p>
 								</div>
 								<div>
 									<button
 										onClick={minusNumber}
-										disabled={items === 1}
+										disabled={counterValue === 1}
 										className=" text-xl rounded-full border-2 px-2 py-2">
 										&#8722;
 									</button>
@@ -210,13 +235,22 @@ export default function Checkout() {
 					{" "}
 					<div className="max-lg:order-2 self-start max-lg:self-center mt-20 max-lg:mt-10 text-center flex justify-center flex-col items-center    ">
 						<h4 className="text-5xl font-bold">מחיר: ₪1,699</h4>
-						<h5 className="text-3xl"></h5>
-						<div className="button-container-2  mt-10 ">
+
+						<Link
+							to={"/Bill"}
+							onClick={() => {
+								dispatch(setImg(doble));
+								dispatch(setTitle("BRL 3605 מכונת אספרסו"));
+								dispatch(
+									setDes(".המכונת הקפה המושלמת לבית שלכם ולבתי קפה במחיר מטורף")
+								);
+							}}
+							className="button-container-2 mt-5 ">
 							<span className="mas"> קנה עכשיו</span>
 							<button type="button" name="Hover">
 								קנה עכשיו
 							</button>
-						</div>
+						</Link>
 					</div>{" "}
 					<div className="flex justify-end max-lg:justify-center  mt-10 max-lg:order-1">
 						<img

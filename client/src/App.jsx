@@ -9,6 +9,7 @@ import Checkout from "./components/checkout/Checkout";
 import Navbar from "./components/navbar/Navbar";
 import ReactGA from "react-ga";
 import { useEffect } from "react";
+import Bill from "./components/bill/Bill";
 
 function App() {
 	useEffect(() => {
@@ -24,7 +25,7 @@ function App() {
 
 	return (
 		<>
-			<div className=" fixed top-0 w-full  h-[35px] bg-[#655032] z-[5000000]">
+			<div className=" fixed top-0 w-full  h-[35px] bg-[#655032] z-[5000000] ">
 				<Navbar />
 			</div>
 
@@ -44,6 +45,7 @@ function App() {
 				/>
 
 				<Route path="/Checkout" element={<Checkout />} />
+				<Route path="/Bill" element={<Bill />} />
 			</Routes>
 		</>
 	);
