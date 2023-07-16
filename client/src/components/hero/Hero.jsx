@@ -54,7 +54,7 @@ export default function Hero() {
 			</div>
 			<div className=" z-50  ">
 				{" "}
-				<div className=" relative">
+				<div className=" relative md:max-lg:mt-20">
 					<img className="  " src={img} alt="image" />{" "}
 					<div className="    ">
 						{" "}

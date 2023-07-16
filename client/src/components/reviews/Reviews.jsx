@@ -34,13 +34,12 @@ export default function Reviews() {
 			observer.disconnect();
 		};
 	}, []);
-	console.log(isCardVisible);
 
 	return (
 		<div className="flex gap-20 justify-center pt-10 pb-5 text-right max-md:flex-col items-center ">
 			<div
 				ref={(ref) => cardRefs.current.push(ref)}
-				className={` md:max-xl:hidden ${
+				className={`  ${
 					isCardVisible[0] === true
 						? " translate-x-0 opacity-100 "
 						: "translate-x-[-100%] max-md:translate-x-[-50%] opacity-0"
@@ -70,7 +69,7 @@ export default function Reviews() {
 					isCardVisible[1] === true
 						? " translate-x-0 opacity-100 "
 						: "translate-x-[-110%] max-md:translate-x-[-50%] opacity-0"
-				}  h-[300px] style w-[280px] bg-[#FFF5D6] p-8 text-[white] rounded-md shadow `}>
+				}  h-[300px] style w-[280px] md:max-lg:hidden bg-[#FFF5D6] p-8 text-[white] rounded-md shadow `}>
 				<div>
 					<img className="w-[50px]" src={svg} alt="" />
 				</div>
@@ -96,7 +95,7 @@ export default function Reviews() {
 					isCardVisible[2] === true
 						? " translate-x-0 opacity-100 "
 						: "translate-x-[-110%] max-md:translate-x-[-50%] opacity-0"
-				}  h-[300px] style w-[280px] bg-[#FFF5D6] p-8 text-[white] rounded-md shadow `}>
+				}  h-[300px] style w-[280px] md:max-lg:hidden bg-[#FFF5D6] p-8 text-[white] rounded-md shadow `}>
 				<div>
 					<img className="w-[50px]" src={svg} alt="" />
 				</div>
