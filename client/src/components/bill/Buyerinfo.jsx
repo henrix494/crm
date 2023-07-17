@@ -53,10 +53,10 @@ export default function Buyerinfo() {
 
 	return (
 		<div>
-			<form action="">
-				<div className="p-3 max-lg:p-0 flex flex-col gap-2 justify-center">
+			<form action=" ">
+				<div className="p-3 max-lg:p-0 flex flex-col gap-2 justify-center     ">
 					{" "}
-					<div className=" text-[black] flex text-right gap-2 mt-2 justify-center  ">
+					<div className=" text-[black] flex text-right gap-2 mt-4 justify-center   ">
 						{" "}
 						<div>
 							{" "}
@@ -66,7 +66,7 @@ export default function Buyerinfo() {
 							</div>
 							<input
 								ref={lastNameRef}
-								className=" border-2 border-[black] rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none  rounded-lg text-right max-lg:w-[150px]"
 								type="text"
 								id="name"
 								name="name"
@@ -82,7 +82,7 @@ export default function Buyerinfo() {
 								<label htmlFor="last_name">שם פרטי</label>
 							</div>
 							<input
-								className=" border-2 border-[black] rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
 								type="text"
 								id="last_name"
 								name="last_name"
@@ -111,7 +111,7 @@ export default function Buyerinfo() {
 						<div>
 							<input
 								ref={phone}
-								className=" border-2 border-[black] rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
 								placeholder="טלפון"
 								type="text"
 								onChange={() => {
@@ -129,7 +129,7 @@ export default function Buyerinfo() {
 							</div>
 							<input
 								ref={street}
-								className=" border-2 border-[black] rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
 								type="text"
 								id="street"
 								name="street"
@@ -146,7 +146,7 @@ export default function Buyerinfo() {
 							</div>
 							<input
 								ref={city}
-								className=" border-2 border-[black] rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
 								type="text"
 								id="last_name"
 								name="last_name"
@@ -166,7 +166,7 @@ export default function Buyerinfo() {
 							</div>
 							<input
 								ref={numOfTheAprt}
-								className=" border-2 border-[black] rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
 								type="text"
 								id="numofaprt"
 								name="numofaprt"
@@ -183,7 +183,7 @@ export default function Buyerinfo() {
 							</div>
 							<input
 								ref={numOfTheBuilding}
-								className=" border-2 border-[black] rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
 								type="text"
 								id="last_name"
 								name="last_name"
@@ -201,8 +201,8 @@ export default function Buyerinfo() {
 							ref={notes}
 							name="notes"
 							id="notes"
-							cols="20"
-							rows="7"
+							cols="10"
+							rows="4"
 							className="border-2 border-[black] w-full rounded-lg"
 							onChange={() => {
 								dispatch(setNotes(notes.current.value));

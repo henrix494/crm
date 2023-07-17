@@ -20,7 +20,6 @@ import { increment } from "../../features/ItemCountReducer";
 import { decrement } from "../../features/ItemCountReducer";
 import { addPrice } from "../../features/ItemCountReducer";
 import { minusPrice } from "../../features/ItemCountReducer";
-import { secondItemPrice } from "../../features/ItemCountReducer";
 
 import { setImg } from "../../features/itemDes";
 import { setTitle } from "../../features/itemDes";
@@ -33,7 +32,6 @@ export default function Checkout() {
 	const [readMore, setReadMore] = useState(false);
 	const [dis, setDis] = useState(2000);
 	const counterValue = useSelector((state) => state.counter.value);
-	const IMGValue = useSelector((state) => state.img.value);
 	const priceCounter = useSelector((state) => state.counter.price);
 
 	const dispatch = useDispatch();
@@ -240,7 +238,7 @@ export default function Checkout() {
 							to={"/Bill"}
 							onClick={() => {
 								dispatch(setImg(doble));
-								dispatch(setTitle("BRL 3605 מכונת אספרסו"));
+								dispatch(setTitle("חבילה קפה מושלמת"));
 								dispatch(
 									setDes(".המכונת הקפה המושלמת לבית שלכם ולבתי קפה במחיר מטורף")
 								);

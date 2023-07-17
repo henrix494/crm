@@ -49,16 +49,16 @@ export default function Bill() {
 		}
 	};
 	return (
-		<div className=" max-lg:mt-[15%] mt-10    ">
+		<div className=" max-lg:mt-[15%] mt-10 lg:flex lg:justify-center lg:items-center lg:h-[90vh]    ">
 			<div className=" flex justify-center items-center gap-20 max-lg:flex-col-reverse">
-				<div className="h-[600px] w-[400px] max-lg:w-[100vw]  ">
+				<div className="h-[600px] w-[400px] max-lg:w-[100vw] max-md:h-[200px]  ">
 					<div className=" flex justify-center items-center bg-[#ac7e3d] w-full h-[70px] rounded-t-3xl text-3xl text-[white]">
 						<h2>תשלום</h2>
 					</div>
 					<Pay />
 					<div></div>
 				</div>
-				<div className="h-[600px] w-[400px] max-lg:w-[100vw] ">
+				<div className="h-[600px] w-[400px] max-lg:w-[100vw] max-md:h-max ">
 					<div className=" bg-[#ac7e3d] w-full h-[70px] rounded-t-3xl flex justify-center items-center text-3xl text-[white]">
 						פרטי המזמין
 					</div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./cos.css";
+import "./coss.css";
 import anotherBean from "../../assets/anotherbean.png";
 import bean from "../../assets/bean.png";
 import { Link } from "react-router-dom";
@@ -132,7 +132,7 @@ export default function Contact() {
 							<div className="flex justify-center   max-lg:mr-0">
 								{" "}
 								{isLoading && (
-									<div className="lds-ellipsis ">
+									<div className="lds-ellipsis white ">
 										<div></div>
 										<div></div>
 										<div></div>
