@@ -111,11 +111,11 @@ export default function Checkout() {
 										<span className=" font-normal">15054</span> :מקט &#8226;{" "}
 									</li>
 									<li className="font-bold">
-										אחריות:<span className=" font-normal"> חודשים 12</span>{" "}
+										אחריות:<span className=" font-normal"> 12 חודשים</span>{" "}
 										&#8226;
 									</li>
 									<li className="font-bold">
-										זמן אספקה:<span className=" font-normal"> חודשים 12</span>{" "}
+										זמן אספקה:<span className=" font-normal"> עד 14 ימים</span>{" "}
 										&#8226;
 									</li>
 									<li className="font-bold">
