@@ -11,12 +11,16 @@ const initialState = {
 	numOfTheAprt: "",
 	notes: "",
 	error: "",
+	isLoading: null,
 };
 
 const formSlice = createSlice({
 	name: "form",
 	initialState,
 	reducers: {
+		setIsLoading(state, action) {
+			state.isLoading = action.payload;
+		},
 		setError(state, action) {
 			state.error = action.payload;
 		},
@@ -61,5 +65,6 @@ export const {
 	setNotes,
 	setStaretPhone,
 	setError,
+	setIsLoading,
 } = formSlice.actions;
 export default formSlice.reducer;

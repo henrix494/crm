@@ -49,8 +49,8 @@ export default function Bill() {
 		}
 	};
 	return (
-		<div className=" max-lg:absolute max-sm:top-20 md:max-lg:top-[-20%] ">
-			<div className=" flex justify-center items-center h-[100vh] gap-20 max-lg:flex-col-reverse">
+		<div className=" max-lg:mt-[15%] mt-10    ">
+			<div className=" flex justify-center items-center gap-20 max-lg:flex-col-reverse">
 				<div className="h-[600px] w-[400px] max-lg:w-[100vw]  ">
 					<div className=" flex justify-center items-center bg-[#ac7e3d] w-full h-[70px] rounded-t-3xl text-3xl text-[white]">
 						<h2>תשלום</h2>
@@ -64,14 +64,14 @@ export default function Bill() {
 					</div>
 					<Buyerinfo />
 				</div>
-				<div className="h-[600px] w-[400px] max-lg:mt-[100%] max-lg:w-[100vw]  ">
+				<div className="h-[600px] max-lg:h-full w-[400px]  max-lg:w-[100vw]  ">
 					<div className=" bg-[#ac7e3d] w-full h-[70px] rounded-t-3xl flex justify-center items-center text-3xl  text-[white] ">
 						<h2>עגלת הקניות שלי</h2>
 					</div>
-					<div className=" flex flex-row-reverse text-right pt-4 items-end gap-2 border-2 pb-8">
+					<div className=" flex flex-row-reverse text-right pt-4 items-center gap-2 border-2 pb-8">
 						<div
 							className={`${
-								IMGValue === "/src/assets/doble.png" ? " mb-20" : "w-[200px]"
+								IMGValue === "/src/assets/doble.png" ? "" : "w-[200px]"
 							}  `}>
 							<img src={IMGValue} alt="" />
 						</div>

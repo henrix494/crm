@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { setError } from "../../features/formSlice";
+import { setError, setIsLoading } from "../../features/formSlice";
 import { useDispatch } from "react-redux";
 export default function Pay() {
 	const name = useSelector((state) => state.form.name);
@@ -14,6 +14,7 @@ export default function Pay() {
 	const Paddle = window.Paddle;
 	const dispatch = useDispatch();
 	const postHandler = async () => {
+		dispatch(setIsLoading(true));
 		const data = await fetch("https://crm-ten-iota.vercel.app/postShip", {
 			method: "POST",
 			headers: {
@@ -33,8 +34,12 @@ export default function Pay() {
 		if (data.status === 401) {
 			const resData = await data.json();
 			dispatch(setError(resData));
+			dispatch(setIsLoading(false));
 		}
 		if (data.status === 200) {
+			dispatch(setIsLoading(false));
+			dispatch(setError(""));
+
 			Paddle.Checkout.open({
 				product: 55186,
 			});
@@ -44,9 +49,9 @@ export default function Pay() {
 		<div className="flex justify-center items-center mt-10">
 			{" "}
 			<button onClick={postHandler} className="button-container-2  ">
-				<span className="mas"> קנה עכשיו</span>
+				<span className="mas"> מעבר לתשלום</span>
 				<button type="button" name="Hover">
-					קנה עכשיו
+					מעבר לתשלום
 				</button>
 			</button>
 		</div>

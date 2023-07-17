@@ -12,6 +12,7 @@ import {
 	setNotes,
 	setStaretPhone,
 } from "../../features/formSlice";
+import "./cos.css";
 export default function Buyerinfo() {
 	const name = useRef(null);
 	const lastNameRef = useRef(null);
@@ -22,6 +23,7 @@ export default function Buyerinfo() {
 	const numOfTheAprt = useRef(null);
 	const notes = useRef(null);
 	const errorData = useSelector((state) => state.form.error);
+	const loadingData = useSelector((state) => state.form.isLoading);
 	const dispatch = useDispatch();
 	const numbers = [
 		"02",
@@ -207,6 +209,17 @@ export default function Buyerinfo() {
 							}}></textarea>
 						<div className="text-[red] text-center text-3xl">{errorData}</div>
 					</div>
+					{loadingData === true && (
+						<div className="flex justify-center   max-lg:mr-0 ">
+							{" "}
+							<div className="lds-ellipsis ">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+					)}
 				</div>
 			</form>
 		</div>
