@@ -2,10 +2,15 @@ const cors = require("cors");
 const express = require(`express`);
 const app = express();
 const { createUser } = require("./routes/info");
-require("./routes/info");
-const { createShipingInfo } = require("./routes/shipping");
 
-app.use(cors({ origin: "*" }));
+const { createShipingInfo } = require("./routes/shipping");
+require("./routes/info");
+
+var corsOptions = {
+	origin: ["https://www.kapit-coffee.com", "http://localhost:3000"],
+	optionsSuccessStatus: 200, // For legacy browser support
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.post(`/info`, createUser);
