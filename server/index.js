@@ -1,10 +1,11 @@
-const cors = require("cors");
 const express = require(`express`);
+
 const app = express();
+
 const { createUser } = require("./routes/info");
 
 const { createShipingInfo } = require("./routes/shipping");
-require("./routes/info");
+const cors = require("cors");
 
 var corsOptions = {
 	origin: ["https://www.kapit-coffee.com", "http://localhost:3000"],
@@ -12,6 +13,7 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 app.use(express.json());
+require("./routes/info");
 
 app.post(`/info`, createUser);
 app.post(`/postShip`, createShipingInfo);
