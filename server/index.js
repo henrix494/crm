@@ -8,7 +8,7 @@ const { createShipingInfo } = require("./routes/shipping");
 const cors = require("cors");
 
 var corsOptions = {
-	origin: ["https://www.kapit-coffee.com", "http://localhost:3000"],
+	origin: ["https://www.kapit-coffee.com"],
 	optionsSuccessStatus: 200, // For legacy browser support
 };
 app.use(cors(corsOptions));
