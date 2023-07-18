@@ -66,7 +66,7 @@ export default function Buyerinfo() {
 							</div>
 							<input
 								ref={lastNameRef}
-								className=" border-b-2 border-black focus:outline-none  rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								type="text"
 								id="name"
 								name="name"
@@ -82,7 +82,7 @@ export default function Buyerinfo() {
 								<label htmlFor="last_name">שם פרטי</label>
 							</div>
 							<input
-								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								type="text"
 								id="last_name"
 								name="last_name"
@@ -111,7 +111,7 @@ export default function Buyerinfo() {
 						<div>
 							<input
 								ref={phone}
-								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								placeholder="טלפון"
 								type="text"
 								onChange={() => {
@@ -129,7 +129,7 @@ export default function Buyerinfo() {
 							</div>
 							<input
 								ref={street}
-								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								type="text"
 								id="street"
 								name="street"
@@ -142,14 +142,14 @@ export default function Buyerinfo() {
 							{" "}
 							<div>
 								{" "}
-								<label htmlFor="last_name">עיר</label>
+								<label htmlFor="city">עיר</label>
 							</div>
 							<input
 								ref={city}
-								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								type="text"
-								id="last_name"
-								name="last_name"
+								id="city"
+								name="city"
 								onChange={() => {
 									dispatch(setCity(city.current.value));
 								}}
@@ -166,7 +166,7 @@ export default function Buyerinfo() {
 							</div>
 							<input
 								ref={numOfTheAprt}
-								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								type="text"
 								id="numofaprt"
 								name="numofaprt"
@@ -179,14 +179,14 @@ export default function Buyerinfo() {
 							{" "}
 							<div>
 								{" "}
-								<label htmlFor="last_name">מספר בניין</label>
+								<label htmlFor="numOfbulding">מספר בניין</label>
 							</div>
 							<input
 								ref={numOfTheBuilding}
-								className=" border-b-2 border-black focus:outline-none rounded-lg text-right max-lg:w-[150px]"
+								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								type="text"
-								id="last_name"
-								name="last_name"
+								id="numOfbulding"
+								name="numOfbulding"
 								onChange={() => {
 									dispatch(setnumOfTheBuilding(numOfTheBuilding.current.value));
 								}}
@@ -203,7 +203,7 @@ export default function Buyerinfo() {
 							id="notes"
 							cols="10"
 							rows="4"
-							className="border-2 border-[black] w-full rounded-lg"
+							className="border-2  w-full rounded-lg text-right"
 							onChange={() => {
 								dispatch(setNotes(notes.current.value));
 							}}></textarea>
