@@ -1,8 +1,6 @@
 const { shipInfo } = require("../models/shiping");
 const { connectToDB } = require("../utils/mongo");
-const cors = require("cors");
 
-app.use(cors({ origin: "*" }));
 async function createShipingInfo(req, res) {
 	const {
 		name,
