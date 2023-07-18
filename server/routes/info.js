@@ -1,7 +1,9 @@
 // userController.js
 const { User } = require("../models/userInfo");
 const { connectToDB } = require("../utils/mongo");
+const cors = require("cors");
 
+app.use(cors({ origin: "*" }));
 async function createUser(req, res) {
 	const { name, phone } = req.body;
 
