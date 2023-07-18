@@ -2,12 +2,11 @@ import imgM from "../../assets/Gemilai-CRM3605-2022pp.png";
 import tank from "../../assets/1688144133605.png";
 import handle from "../../assets/handle.jpg";
 import brush from "../../assets/brush.jpg";
-
 import "./equ.css";
 export default function Equ() {
 	return (
-		<div className="bg-[#F4EDE4] pb-10 ">
-			<h2 className=" text-center text-5xl text-[black] pt-8 font-bold">
+		<div className="bg-[#F4EDE4] pb-10 relative  ">
+			<h2 className=" text-center text-5xl text-[black] pt-8 font-bold z-30">
 				מה בא בפנים
 			</h2>
 			<div className="flex gap-[70px] justify-center mt-16 max-md:flex-col max-md:items-center">

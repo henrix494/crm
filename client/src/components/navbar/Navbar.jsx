@@ -30,7 +30,7 @@ export default function Navbar() {
 				{window.location.pathname === "/Checkout" ? (
 					<Link to={"/#info"}>
 						<img
-							className="w-[2rem] max-lg:w-6 cursor-pointer"
+							className="w-[20px] max-lg:w-6 cursor-pointer"
 							src={info}
 							alt=""
 						/>
@@ -39,7 +39,7 @@ export default function Navbar() {
 					<a href="#info">
 						{" "}
 						<img
-							className="w-[2rem] max-lg:w-6 cursor-pointer"
+							className="w-[20px] max-lg:w-6 cursor-pointer"
 							src={info}
 							alt=""
 						/>
@@ -56,7 +56,7 @@ export default function Navbar() {
 					return (
 						<p
 							key={i}
-							className={`absolute top-1/2 transition-all duration-1000 ease-in-out translate-y-[-50%] translate-x-${translateX} opacity-${opacity}`}
+							className={` text-xl absolute top-1/2 transition-all duration-1000 ease-in-out translate-y-[-50%] translate-x-${translateX} opacity-${opacity}`}
 							style={{ transitionDelay }}>
 							{text}
 						</p>
@@ -65,7 +65,7 @@ export default function Navbar() {
 			</div>
 			<div className="pr-10 max-lg:pr-2 ">
 				<Link to="/">
-					<img className="w-[2rem] max-lg:w-6" src={home} alt="" />
+					<img className="w-[20px] max-lg:w-6" src={home} alt="" />
 				</Link>
 			</div>
 		</div>
