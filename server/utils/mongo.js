@@ -5,8 +5,8 @@ async function connectToDB() {
 	mongoose.set("strictQuery", true);
 	try {
 		await mongoose.connect(
-			process.env.MONGO_URL
-				
+			process.env.MONGO_URL,
+
 			{
 				dbName: "crm",
 				useNewUrlParser: true,
