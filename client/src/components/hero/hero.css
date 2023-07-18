@@ -128,17 +128,20 @@ a {
 
 .timeFrame {
 	animation: ani4;
-	animation-duration: 0.7s;
+	animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+	animation-duration: 0.3s;
 }
 .timeFrameR {
 	animation: ani5;
-	animation-duration: 0.7s;
+	animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	animation-duration: 0.3s;
 	opacity: 0;
 }
 
 @keyframes ani4 {
 	from {
-		opacity: 0;
+		opacity: 0.5;
 	}
 	to {
 		opacity: 1;

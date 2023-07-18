@@ -15,7 +15,6 @@ export default function Navbar() {
 		const timer = setInterval(() => {
 			setIsAnimating(true);
 			setTimeout(() => {
-				console.log(window.location.pathname);
 				setIndex((prevIndex) => (prevIndex + 1) % tests.length);
 				setIsAnimating(false);
 			}, 1000);
