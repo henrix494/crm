@@ -19,7 +19,7 @@ export default function Pay() {
 	const postHandler = async () => {
 		dispatch(setIsLoading(true));
 
-		const data = await fetch("http://localhost:3000/postShip", {
+		const data = await fetch("https://crm-ten-iota.vercel.app/postShip", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
