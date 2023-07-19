@@ -30,7 +30,7 @@ async function chekout(req, res) {
 				Name: name,
 				PhoneNumber: phone,
 				Attributes: {
-					HolderId: "none",
+					HolderId: "required",
 					Name: "required",
 					PhoneNumber: "required",
 					Email: "optional",
