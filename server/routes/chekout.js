@@ -9,7 +9,7 @@ async function chekout(req, res) {
 			Key: process.env.zcredit,
 			Local: "He",
 			UniqueId: "",
-			SuccessUrl: "",
+			SuccessUrl: "https://www.kapit-coffee.com/",
 			CancelUrl: "",
 			CallbackUrl: "",
 			PaymentType: "regular",
