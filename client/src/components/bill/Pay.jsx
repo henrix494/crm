@@ -11,11 +11,15 @@ export default function Pay() {
 	const numOfTheBuilding = useSelector((state) => state.form.numOfTheBuilding);
 	const numOfTheAprt = useSelector((state) => state.form.numOfTheAprt);
 	const notes = useSelector((state) => state.form.notes);
-	const Paddle = window.Paddle;
+	const currentItem = useSelector((state) => state.img.value);
+	const amountOne = useSelector((state) => state.counter.value);
+	const amountTwo = useSelector((state) => state.counter.valueTwo);
+
 	const dispatch = useDispatch();
 	const postHandler = async () => {
 		dispatch(setIsLoading(true));
-		const data = await fetch("https://crm-ten-iota.vercel.app/postShip", {
+
+		const data = await fetch("http://localhost:3000/postShip", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -31,6 +35,7 @@ export default function Pay() {
 				note: notes,
 			}),
 		});
+
 		if (data.status === 401) {
 			const resData = await data.json();
 			dispatch(setError(resData));
@@ -40,13 +45,23 @@ export default function Pay() {
 			dispatch(setIsLoading(false));
 			dispatch(setError(""));
 
-			Paddle.Checkout.open({
-				product: 55186,
+			const zCredit = await fetch("https://crm-ten-iota.vercel.app/cheakout", {
+				method: "POST",
+				headers: { "Content-Type": "application/json " },
+				body: JSON.stringify({
+					phone: Fphone + phone,
+					currentItem: currentItem,
+					amountTwo: amountTwo,
+					amountOne: amountOne,
+					name: name,
+				}),
 			});
+			const final = await zCredit.json();
+			window.open(final.sessionUrl);
 		}
 	};
 	return (
-		<div className="flex justify-center items-center mt-10">
+		<div className="flex flex-col justify-center items-center mt-10 ">
 			{" "}
 			<button onClick={postHandler} className="button-container-2  ">
 				<span className="mas"> מעבר לתשלום</span>

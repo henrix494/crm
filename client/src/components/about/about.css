@@ -1,0 +1,12 @@
+main {
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+main > div {
+	height: 100vh;
+	display: flex;
+	background: #eee;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}

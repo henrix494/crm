@@ -24,7 +24,7 @@ export default function Navbar() {
 	}, [indexx, tests.length]);
 
 	return (
-		<div className="relative z-[9000] w-full flex justify-between items-center h-full text-[white] text-2xl ">
+		<div className="relative z-[9000] w-screen flex justify-between items-center h-full text-[white] text-2xl  ">
 			<div className="pl-10 max-lg:pl-2 relative  ">
 				{" "}
 				{window.location.pathname === "/Checkout" ? (

@@ -12,10 +12,9 @@ import Bill from "./components/bill/Bill";
 function App() {
 	return (
 		<>
-			<div className=" fixed top-0 w-full  h-[30px] bg-[#15120c] z-[5000000] ">
+			<div className=" fixed top-0 right-0   h-[30px] bg-[#15120c] z-[5000000] ">
 				<Navbar />
-			</div>
-
+			</div>{" "}
 			<Routes>
 				<Route
 					path="/"

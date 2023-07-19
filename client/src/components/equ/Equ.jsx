@@ -5,11 +5,11 @@ import brush from "../../assets/brush.jpg";
 import "./equ.css";
 export default function Equ() {
 	return (
-		<div className="bg-[#F4EDE4] pb-10 relative  ">
+		<div className="bg-[#F4EDE4] pb-10  flex justify-center flex-col   ">
 			<h2 className=" text-center text-5xl text-[black] pt-8 font-bold z-30">
 				מה בא בפנים
 			</h2>
-			<div className="flex gap-[70px] justify-center mt-16 max-md:flex-col max-md:items-center">
+			<div className="flex gap-[70px]  justify-center mt-16 max-md:flex-col max-md:items-center">
 				<div className="flex gap-10 max-xl:flex-col">
 					<div className=" bg-[#D0CFD3] border-2 h-[300px] border-[#F58422] rounded-md w-[300px] relative first ">
 						<img src={imgM} alt="תמונה של מכונת קפה" />
@@ -22,7 +22,7 @@ export default function Equ() {
 						/>
 					</div>
 				</div>
-				<div className="flex gap-10 max-xl:flex-col">
+				<div className="flex gap-10 max-xl:flex-col ">
 					<div className=" border-2 h-[300px] w-[300px] relative third">
 						{" "}
 						<img

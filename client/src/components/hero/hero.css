@@ -155,3 +155,30 @@ a {
 		opacity: 0;
 	}
 }
+.shrink-container {
+	transition: transform 2s cubic-bezier(0.39, 0.575, 0.565, 1); /* Adjust the transition duration as needed */
+
+	transform: translateY(-100%) scaleX(0.95);
+}
+
+.shrink-containerr {
+	transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1); /* Adjust the transition duration as needed */
+	transform: translateY(0px);
+}
+@media screen and (max-height: 768px) {
+	.res {
+		width: 80%;
+	}
+	.resHandle {
+		right: 74% !important;
+	}
+	.resbar {
+		right: 65% !important;
+	}
+	.resSwitch {
+		right: 30% !important;
+	}
+	.resTank {
+		right: 20% !important;
+	}
+}
