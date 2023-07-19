@@ -29,6 +29,7 @@ async function chekout(req, res) {
 				Email: "someone@gmail.com",
 				Name: name,
 				PhoneNumber: phone,
+				HolderId: "ascasc",
 				Attributes: {
 					HolderId: "required",
 					Name: "required",
