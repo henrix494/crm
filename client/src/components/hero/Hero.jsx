@@ -11,16 +11,16 @@ export default function Hero() {
 	const [isHandleHover, setIsHandleHover] = useState(false);
 
 	return (
-		<div className={`h-[100vh] bg-[#D6D6E3]   flex justify-center `}>
+		<div className={`h-[100vh] bg-[#D6D6E3]   flex justify-center relative `}>
 			<div className="text-[black] pt-20 flex flex-col items-center justify-center z-30">
 				<div className=" text-center">
 					{" "}
 					<div>
 						{" "}
-						<h2 className=" text-8xl max-md:text-4xl font-bold">
+						<h2 className=" text-8xl max-md:text-4xl font-bold test-ani">
 							כפית מכונת קפה
 						</h2>
-						<p className=" text-3xl pt-5 text-center font-bold">
+						<p className=" text-3xl pt-5 text-center font-bold ops-ani ">
 							{" "}
 							<span className=" line-through pr-4	text-xl font-normal">
 								₪ 2,000{" "}

@@ -182,3 +182,30 @@ a {
 		right: 20% !important;
 	}
 }
+
+.test-ani {
+	animation-name: beanani;
+	animation-duration: 2s;
+}
+
+.ops-ani {
+	animation-name: ops-ani;
+	animation-duration: 6s;
+}
+@keyframes beanani {
+	0% {
+		transform: translateY(-100px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes ops-ani {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
