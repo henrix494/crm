@@ -26,7 +26,10 @@ export default function Bill() {
 
 	const des = useSelector((state) => state.img.des);
 	const addNumber = () => {
-		if (IMGValue === "/src/assets/doble.png") {
+		if (
+			IMGValue === "/src/assets/doble.png" ||
+			IMGValue === "/assets/doble-cec3014e.png"
+		) {
 			dispatch(secondItemPriceUp());
 			dispatch(incrementTwo());
 		} else {
@@ -42,7 +45,10 @@ export default function Bill() {
 	}, []);
 
 	const minusNumber = () => {
-		if (IMGValue === "/src/assets/doble.png") {
+		if (
+			IMGValue === "/src/assets/doble.png" ||
+			IMGValue === "/assets/doble-cec3014e.png"
+		) {
 			dispatch(secondItemPriceDown());
 			dispatch(decrementTwo());
 		} else {
@@ -94,13 +100,15 @@ export default function Bill() {
 									</div>
 									<div>
 										<p>
-											{IMGValue === "/src/assets/doble.png"
+											{IMGValue === "/src/assets/doble.png" ||
+											IMGValue === "/assets/doble-cec3014e.png"
 												? counterValueTwo
 												: counterValue}
 										</p>
 									</div>
 									<div>
-										{IMGValue === "/src/assets/doble.png" ? (
+										{IMGValue === "/src/assets/doble.png" ||
+										IMGValue === "/assets/doble-cec3014e.png" ? (
 											<button
 												onClick={() => minusNumber()}
 												disabled={counterValueTwo === 1}
@@ -118,7 +126,8 @@ export default function Bill() {
 									</div>
 									<p className="text-lg">
 										₪
-										{IMGValue === "/src/assets/doble.png"
+										{IMGValue === "/src/assets/doble.png" ||
+										IMGValue === "/assets/doble-cec3014e.png"
 											? priceTwo.toLocaleString()
 											: price.toLocaleString()}{" "}
 									</p>{" "}
