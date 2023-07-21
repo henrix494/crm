@@ -4,7 +4,6 @@ async function chekout(req, res) {
 	const { name, phone, currentItem, amountOne, amountTwo } = await req.body;
 
 	try {
-		console.log(currentItem);
 		const requestBody = {
 			Key: process.env.zcredit,
 			Local: "He",
@@ -29,7 +28,7 @@ async function chekout(req, res) {
 				Email: "someone@gmail.com",
 				Name: name,
 				PhoneNumber: phone,
-				HolderId: "ascasc",
+				HolderId: "",
 				Attributes: {
 					HolderId: "required",
 					Name: "required",

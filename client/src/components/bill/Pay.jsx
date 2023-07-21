@@ -61,7 +61,7 @@ export default function Pay() {
 		}
 	};
 	return (
-		<div className="flex flex-col justify-center items-center mt-10 ">
+		<div className="flex flex-col justify-center items-center pt-10  ">
 			{" "}
 			<button onClick={postHandler} className="button-container-2  ">
 				<span className="mas"> מעבר לתשלום</span>

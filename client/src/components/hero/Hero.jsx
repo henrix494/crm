@@ -19,9 +19,9 @@ export default function Hero() {
 					{" "}
 					<div>
 						{" "}
-						<h2 className=" text-8xl max-md:text-4xl font-bold test-ani">
+						<h1 className=" text-8xl max-md:text-4xl font-bold test-ani">
 							כפית מכונת קפה
-						</h2>
+						</h1>
 						<p className=" text-3xl pt-5 text-center font-bold ops-ani ">
 							{" "}
 							<span className=" line-through pr-4	text-xl font-normal">

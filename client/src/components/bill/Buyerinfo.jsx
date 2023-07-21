@@ -52,7 +52,7 @@ export default function Buyerinfo() {
 	});
 
 	return (
-		<div>
+		<div className="">
 			<form action=" ">
 				<div className="p-3 max-lg:p-0 flex flex-col gap-2 justify-center     ">
 					{" "}
