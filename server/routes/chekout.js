@@ -38,14 +38,22 @@ async function chekout(req, res) {
 			},
 			CartItems: [
 				{
-					Amount: currentItem === "/src/assets/doble.png" ? 1699 : 1499,
+					Amount:
+						currentItem === "/src/assets/doble.png" ||
+						currentItem === "/assets/doble-cec3014e.png"
+							? 1699
+							: 1499,
 					Currency: "ILS",
 					Name: "My Item1 Name",
 					Description: "My Item description , comes below the name",
 					Quantity:
-						currentItem === "/src/assets/doble.png" ? amountTwo : amountOne,
+						currentItem === "/src/assets/doble.png" ||
+						currentItem === "/assets/doble-cec3014e.png"
+							? amountTwo
+							: amountOne,
 					Image:
-						currentItem === "/src/assets/doble.png"
+						currentItem === "/src/assets/doble.png" ||
+						currentItem === "/assets/doble-cec3014e.png"
 							? "https://www.kapit-coffee.com/assets/doble-cec3014e.png"
 							: "https://www.kapit-coffee.com/assets/coffe-00a415b7.png",
 					IsTaxFree: "false",
