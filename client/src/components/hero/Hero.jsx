@@ -11,7 +11,9 @@ export default function Hero() {
 	const [isHandleHover, setIsHandleHover] = useState(false);
 
 	return (
-		<div className={`h-[100vh] bg-[#D6D6E3]   flex justify-center relative `}>
+		<div
+			className={`h-[100vh] bg-[#D6D6E3]   flex justify-center relative bg-[url('../../assets/BG/coffee-beans-with-props-making-coffee.jpg')]  `}>
+			{" "}
 			<div className="text-[black] pt-20 flex flex-col items-center justify-center z-30">
 				<div className=" text-center">
 					{" "}
