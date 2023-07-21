@@ -33,6 +33,8 @@ export default function Bill() {
 			dispatch(increment());
 			dispatch(addPrice());
 		}
+		console.log(IMGValue);
+		console.log(priceTwo);
 	};
 
 	useEffect(() => {
