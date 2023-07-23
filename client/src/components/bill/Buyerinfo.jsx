@@ -16,6 +16,8 @@ import "./cos.css";
 export default function Buyerinfo() {
 	const name = useRef(null);
 	const lastNameRef = useRef(null);
+	const Sphone = useRef(null);
+
 	const phone = useRef(null);
 	const city = useRef(null);
 	const street = useRef(null);
@@ -50,10 +52,6 @@ export default function Buyerinfo() {
 	const options = numbers.map((number) => {
 		return { value: number, label: number };
 	});
-
-	const test = () => {
-		console.log(typeof phone.current.value);
-	};
 
 	return (
 		<div className="">
@@ -101,7 +99,7 @@ export default function Buyerinfo() {
 						<div className="flex-1 max-lg:flex-grow-0">
 							{" "}
 							<Select
-								ref={phone}
+								ref={Sphone}
 								options={options}
 								className=" rounded-full max-lg:w-[150px]"
 								onChange={(choise) => {
@@ -118,7 +116,7 @@ export default function Buyerinfo() {
 								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								placeholder="טלפון"
 								type="text"
-								onChange={test}
+								onChange={dispatch(setPhone(phone.current.value))}
 							/>
 						</div>
 					</div>
