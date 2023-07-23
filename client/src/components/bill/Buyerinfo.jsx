@@ -116,7 +116,7 @@ export default function Buyerinfo() {
 								className=" border-b-2 border-black focus:outline-none  text-right max-lg:w-[150px]"
 								placeholder="טלפון"
 								type="text"
-								onChange={dispatch(setPhone(phone.current.value))}
+								onChange={() => dispatch(setPhone(phone.current.value))}
 							/>
 						</div>
 					</div>
