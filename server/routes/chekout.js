@@ -55,7 +55,8 @@ async function chekout(req, res) {
 						currentItem === "/src/assets/doble.png" ||
 						currentItem === "/assets/doble-cec3014e.png"
 							? "https://www.kapit-coffee.com/assets/doble-cec3014e.png"
-							: "https://www.kapit-coffee.com/assets/coffe-00a415b7.png",
+							: "https://www.kapit-coffee.com/assets/coffe-00a415b7.png" ||
+							  "https://www.kapit-coffee.com/assets/Gemilai-CRM3605-2022pp-bda5843b.png",
 					IsTaxFree: "false",
 					AdjustAmount: "false",
 				},
