@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { setError, setIsLoading } from "../../features/formSlice";
 import { useDispatch } from "react-redux";
+import Radio from "./Radio";
 export default function Pay() {
 	const name = useSelector((state) => state.form.name);
 	const lastName = useSelector((state) => state.form.lastName);
@@ -63,12 +64,17 @@ export default function Pay() {
 	return (
 		<div className="flex flex-col justify-center items-center pt-10  ">
 			{" "}
+			<Radio />
 			<button onClick={postHandler} className="button-container-2  ">
 				<span className="mas"> מעבר לתשלום</span>
 				<button type="button" name="Hover">
 					מעבר לתשלום
 				</button>
 			</button>
+			<p className=" text-right text-xs mt-20 ">
+				ביטול עסקה בהתאם לתקנות הגנת הצרכן (ביטול עסקה), התשע"א-2010 וחוק הגנת
+				הצרכן, התשמ"א-1981
+			</p>
 		</div>
 	);
 }

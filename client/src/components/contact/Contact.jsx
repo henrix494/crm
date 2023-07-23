@@ -151,6 +151,9 @@ export default function Contact() {
 						</div>
 					</form>
 				</div>
+				<h2 className="pt-5">
+					כל הזכויות שמורות כפית דרך מצדה 120 באר שבע &#169;{" "}
+				</h2>
 			</div>
 		</div>
 	);
