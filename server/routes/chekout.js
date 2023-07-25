@@ -2,7 +2,6 @@ const fetch = require("node-fetch");
 
 async function chekout(req, res) {
 	const { name, phone, currentItem, amountOne, amountTwo } = await req.body;
-
 	try {
 		const requestBody = {
 			Key: process.env.zcredit,
@@ -76,6 +75,7 @@ async function chekout(req, res) {
 			ShowTotalSumInPayButton: "true",
 			ForceCaptcha: "false",
 		};
+
 		const zCreditResponse = await fetch(
 			"https://pci.zcredit.co.il/webcheckout/api/WebCheckout/CreateSession/",
 			{
@@ -86,7 +86,7 @@ async function chekout(req, res) {
 		);
 
 		const zCreditData = await zCreditResponse.json();
-		console.log(zCreditData);
+
 		res.status(200).json({ sessionUrl: zCreditData.Data.SessionUrl });
 	} catch (error) {
 		console.error(error);

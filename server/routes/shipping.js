@@ -12,7 +12,6 @@ async function createShipingInfo(req, res) {
 		numOfTheAprt,
 		note,
 	} = await req.body;
-
 	try {
 		if (!name) {
 			return res.status(401).json("נא להזין שם");
@@ -42,6 +41,7 @@ async function createShipingInfo(req, res) {
 			});
 
 			await newShipingInfo.save();
+
 			return res.status(200).json("נהיה בקשר בקרוב!");
 		}
 	} catch (error) {

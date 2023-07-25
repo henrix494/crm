@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import { setError, setIsLoading } from "../../features/formSlice";
 import { useDispatch } from "react-redux";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+
 import Radio from "./Radio";
 export default function Pay() {
 	const name = useSelector((state) => state.form.name);
@@ -15,6 +17,7 @@ export default function Pay() {
 	const currentItem = useSelector((state) => state.img.value);
 	const amountOne = useSelector((state) => state.counter.value);
 	const amountTwo = useSelector((state) => state.counter.valueTwo);
+	const typeOfPay = useSelector((state) => state.radio.value);
 
 	const dispatch = useDispatch();
 	const postHandler = async () => {
@@ -34,6 +37,7 @@ export default function Pay() {
 				numOfTheBuilding: numOfTheBuilding,
 				numOfTheAprt: numOfTheAprt,
 				note: notes,
+				typeOfPay: typeOfPay,
 			}),
 		});
 
@@ -45,20 +49,31 @@ export default function Pay() {
 		if (data.status === 200) {
 			dispatch(setIsLoading(false));
 			dispatch(setError(""));
-
-			const zCredit = await fetch("https://crm-ten-iota.vercel.app/cheakout", {
-				method: "POST",
-				headers: { "Content-Type": "application/json " },
-				body: JSON.stringify({
-					phone: Fphone + phone,
-					currentItem: currentItem,
-					amountTwo: amountTwo,
-					amountOne: amountOne,
-					name: name,
-				}),
-			});
-			const final = await zCredit.json();
-			window.open(final.sessionUrl);
+			if (!typeOfPay) {
+				dispatch(setError("נא בחר אמצעי תשלום"));
+			} else {
+				if (typeOfPay === "visa") {
+					const zCredit = await fetch(
+						"https://crm-ten-iota.vercel.app/cheakout",
+						{
+							method: "POST",
+							headers: { "Content-Type": "application/json " },
+							body: JSON.stringify({
+								phone: Fphone + phone,
+								currentItem: currentItem,
+								amountTwo: amountTwo,
+								amountOne: amountOne,
+								name: name,
+							}),
+						}
+					);
+					const final = await zCredit.json();
+					window.open(final.sessionUrl);
+				}
+				if (typeOfPay === "paypal") {
+					console.log("paypal");
+				}
+			}
 		}
 	};
 	return (

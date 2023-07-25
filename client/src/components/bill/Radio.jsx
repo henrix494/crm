@@ -1,8 +1,11 @@
 import visa from "../../assets/visa.png";
 import masterCard from "../../assets/mastercard.png";
 import paypal from "../../assets/paypal.png";
-
+import { useDispatch } from "react-redux";
+import { setOption } from "../../features/radioSlice";
 export default function Radio() {
+	const dispath = useDispatch();
+
 	return (
 		<form className=" self-end pb-10">
 			{" "}
@@ -13,13 +16,31 @@ export default function Radio() {
 						<img src={visa} className="w-12 " alt="" />
 						<img src={masterCard} className="w-12 " alt="" />
 					</div>
-					<input type="radio" name="visa" id="visa" className="mr-2" />
+					<input
+						onChange={(e) => {
+							dispath(setOption(e.target.value));
+						}}
+						type="radio"
+						name="visa"
+						id="visa"
+						value={"visa"}
+						className="mr-2"
+					/>
 					<label htmlFor="visa">תשלום באמצעות אשראי</label>
 				</div>
 				<div className="flex items-center">
 					{" "}
 					<img src={paypal} className="w-12 mr-5" alt="" />
-					<input type="radio" name="visa" id="paypal" className="mr-2" />
+					<input
+						onChange={(e) => {
+							dispath(setOption(e.target.value));
+						}}
+						type="radio"
+						name="visa"
+						value={"paypal"}
+						id="paypal"
+						className="mr-2"
+					/>
 					<label htmlFor="paypal">תשלום באמצעות פייפאל</label>
 				</div>
 			</div>
