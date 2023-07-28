@@ -5,7 +5,7 @@ import "./about.css";
 export default function About() {
 	return (
 		<div className=" bg-[#F4EDE4] px-10 pb-10 relative  flex justify-around    ">
-			<div className="   flex md:max-lg:flex-col gap-10 pt-20  pb-10 border-t-2 border-t-[black] max-md:flex-col max-md:pt-10 max-md:border-none ">
+			<div className="   flex md:max-lg:flex-col gap-10 pt-20  pb-10  max-md:flex-col max-md:pt-10 max-md:border-none ">
 				<div className="flex justify-center ">
 					<img
 						className=" w-[100%] md:max-lg:w-auto h-[400px]  max-md:max-h-[300px] max-md:w-[300px] z-[3]  "

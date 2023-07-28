@@ -54,3 +54,16 @@
 	font-size: 1.4rem;
 }
 
+.animation {
+	transition: all 0.5s ease-in;
+}
+
+@keyframes imgani {
+	0% {
+		top: 0px;
+	}
+
+	100% {
+		right: 500px;
+	}
+}
