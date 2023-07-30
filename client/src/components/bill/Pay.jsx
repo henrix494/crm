@@ -68,7 +68,7 @@ export default function Pay() {
 						}
 					);
 					const final = await zCredit.json();
-					console.log(final);
+					console.log(final.SessionUrl);
 					window.open(final.Data.SessionUrl);
 				}
 				if (typeOfPay === "paypal") {
