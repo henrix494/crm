@@ -28,21 +28,6 @@ export default function Radio() {
 					/>
 					<label htmlFor="visa">תשלום באמצעות אשראי</label>
 				</div>
-				<div className="flex items-center">
-					{" "}
-					<img src={paypal} className="w-12 mr-5" alt="" />
-					<input
-						onChange={(e) => {
-							dispath(setOption(e.target.value));
-						}}
-						type="radio"
-						name="visa"
-						value={"paypal"}
-						id="paypal"
-						className="mr-2"
-					/>
-					<label htmlFor="paypal">תשלום באמצעות פייפאל</label>
-				</div>
 			</div>
 		</form>
 	);

@@ -12,7 +12,7 @@ export default function Hero() {
 
 	return (
 		<div
-			className={`h-[100vh] bg-[#D6D6E3]   flex justify-center relative bg-[url('../../assets/BG/coffee-beans-with-props-making-coffee.jpg')]  `}>
+			className={`h-[105vh] bg-[#D6D6E3]   flex justify-center relative bg-[url('../../assets/BG/coffee-beans-with-props-making-coffee.jpg')]  `}>
 			{" "}
 			<div className="text-[black] pt-20 flex flex-col items-center justify-center z-30">
 				<div className=" text-center">
@@ -54,7 +54,9 @@ export default function Hero() {
 									onMouseEnter={() => setIsHandleHover(true)}
 									onMouseLeave={() => setIsHandleHover(false)}></button>
 								<div
-									className={` z-[2] absolute translate-x-[0%] px-1 translate-y-[-280%] bg-black text-white w-[240px] h-[100px] rounded-lg text-center transition-[15s] ${
+									className={` ${
+										isHandleHover && "z-[5000000000000]"
+									}  z-[2] absolute translate-x-[0%] px-1 translate-y-[-280%] bg-black text-white w-[240px] h-[100px] rounded-lg text-center transition-[15s] ${
 										isHandleHover ? " timeFrame " : " timeFrameR"
 									}`}>
 									<div className="">
@@ -64,7 +66,7 @@ export default function Hero() {
 									</div>
 								</div>
 							</div>
-							<div className=" absolute resbar   top-[20%] right-[70%] ">
+							<div className="  absolute resbar   top-[20%] right-[70%] ">
 								{" "}
 								<button
 									className=" rounded-full w-7 h-5    test z-20 "
@@ -122,32 +124,32 @@ export default function Hero() {
 			<div className="z-[1]">
 				<img
 					src={bean}
-					className="z-[1] absolute w-[200px] max-lg:w-[100px] rotate-[10deg] bottom-20 left-[23%] max-lg:opacity-60 max-md:opacity-40  md:test"
+					className=" z-[1] absolute w-[200px] max-lg:w-[100px] rotate-[10deg] bottom-20 left-[23%] max-lg:opacity-60 max-md:opacity-40  md:test"
 					alt=""
 				/>{" "}
 				<img
 					src={anotherBean}
-					className="z-[1] absolute w-[200px] rotate-[20deg] max-lg:w-[100px] top-0 right-[10%] max-lg:opacity-70  max-md:opacity-40 md:test"
+					className="z-[1]  absolute w-[200px] rotate-[20deg] max-lg:w-[100px] top-0 right-[10%] max-lg:opacity-70  max-md:opacity-40 md:test"
 					alt=""
 				/>{" "}
 				<img
 					src={anotherBean}
-					className=" absolute w-[200px] max-lg:w-[100px] rotate-[30deg] top-[30%] left-[10%] max-lg:opacity-70  max-md:opacity-40 md:test"
+					className=" absolute  w-[200px] max-lg:w-[100px] rotate-[30deg] top-[30%] left-[10%] max-lg:opacity-70  max-md:opacity-40 md:test"
 					alt=""
 				/>{" "}
 				<img
 					src={anotherBean}
-					className=" absolute w-[200px] rotate-[160deg] max-lg:w-[100px] bottom-[50%] right-[26%] max-lg:opacity-70  max-md:opacity-40 md:test"
+					className=" absolute  w-[200px] rotate-[160deg] max-lg:w-[100px] bottom-[50%] right-[26%] max-lg:opacity-70  max-md:opacity-40 md:test"
 					alt=""
 				/>{" "}
 				<img
 					src={bean}
-					className="z-[1] absolute w-[200px] max-lg:w-[100px] rotate-[60deg] top-5 left-[10%] max-lg:opacity-70  max-md:opacity-40 md:test"
+					className="z-[1]  absolute w-[200px] max-lg:w-[100px] rotate-[60deg] top-5 left-[10%] max-lg:opacity-70  max-md:opacity-40 md:test"
 					alt=""
 				/>{" "}
 				<img
 					src={bean}
-					className="z-[1] absolute w-[200px] rotate-[20deg] max-lg:w-[100px] bottom-[60%] right-[10%] max-lg:opacity-70  max-md:opacity-40 md:test"
+					className="z-[1]  absolute w-[200px] rotate-[20deg] max-lg:w-[100px] bottom-[29%] right-[5%] max-lg:opacity-70  max-md:opacity-40 md:test"
 					alt=""
 				/>
 				<img

@@ -61,7 +61,7 @@ export default function Checkout() {
 	return (
 		<div>
 			<div className="pt-[8%] grid grid-cols-5 max-lg:flex max-lg:flex-col   ">
-				<div className=" mr-[10%] text-right  col-span-3 max-lg:order-2 max-lg:mt-[35%] max-lg:w-full   ">
+				<div className=" mr-[10%] text-right  col-span-3 max-lg:order-2 max-lg:mt-[35%] md:max-lg:mt-[20%] max-lg:w-full   ">
 					<div className=" border-b-2 pb-8  ">
 						<h2 className=" font-bold text-4xl max-md:pr-4">
 							BRL 3605 מכונת אספרסו{" "}
@@ -73,13 +73,18 @@ export default function Checkout() {
 						<p className="pt-2 text-xl max-md:pr-4">
 							.המכונת הקפה המושלמת לבית שלכם ולבתי קפה במחיר מטורף
 						</p>
-						<div className={`${readMore ? "block" : "hidden"} max-md:pr-4`}>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
-								aliquid minima, temporibus necessitatibus placeat expedita
-								nesciunt, aperiam, perspiciatis nihil iste ipsa eligendi rerum
-								laboriosam ut quos? Debitis a nam illum?
-							</p>
+						<div
+							className={`${
+								readMore ? "block" : "hidden"
+							} max-md:pr-4 mt-5 text-lg`}>
+							<p>BRL 3605 :דגם</p>
+							<p>15BAR :גודל לחץ </p>
+							<p>קיבולת מיכל מים: 1.7 ליטר </p>
+							<p>גודל: 285*257*315</p>
+							<div className="flex  flex-row-reverse gap-1">
+								<p> :מתח</p>
+								<p>220V 50Hz </p>
+							</div>
 						</div>
 						{!readMore ? (
 							<button
@@ -197,7 +202,7 @@ export default function Checkout() {
 						קודם
 					</button>
 					<img
-						className={`h-full w-full object-cover max-lg:w-[100%]  ${
+						className={`h-full w-full object-cover md:max-lg:w-[50%] md:max-lg:self-center  ${
 							currentIndex === 4 && ` object-fit`
 						}`}
 						src={imageSrc[currentIndex]}
@@ -208,7 +213,7 @@ export default function Checkout() {
 						onClick={goToNextImage}>
 						הבא
 					</button>{" "}
-					<div className="flex  w-[90px]  gap-5 mt-10 max-lg:flex max-lg:justify-between max-md:gap-0 max-md:w-full   ">
+					<div className="flex  w-[90px]  gap-5 mt-10 max-lg:flex max-lg:justify-between max-md:gap-0 max-md:w-full md:max-lg:ml-40   ">
 						{imageSrc.map((img, index) => {
 							return (
 								<img
@@ -224,14 +229,15 @@ export default function Checkout() {
 				</div>
 			</div>
 			<div className=" border-t-2 mt-20 max-md:mt-7 text-right  ">
-				<div className="  max-lg:mr-0   mr-[10vw]">
-					<h3 className="  text-4xl font-bold mt-8 max-lg:text-2xl max-lg:text-center">
+				<div className="  max-xl:mr-0   mr-[10vw]">
+					<h3 className="  text-4xl font-bold mt-8 max-lg:text-2xl max-xl:text-center">
 						חבילה מומלצת לחוויה המושלמת{" "}
 					</h3>
 				</div>
-				<div className="flex items-center justify-around max-lg:flex-col ">
+
+				<div className="flex items-center justify-around max-xl:flex-col ">
 					{" "}
-					<div className="max-lg:order-2 self-start max-lg:self-center mt-20 max-lg:mt-10 text-center flex justify-center flex-col items-center    ">
+					<div className="max-xl:order-2 self-start max-xl:self-center mt-20 max-lg:mt-10 text-center flex justify-center flex-col items-center     ">
 						<h4 className="text-5xl font-bold">מחיר: ₪1,699</h4>
 
 						<Link
@@ -250,20 +256,40 @@ export default function Checkout() {
 							</button>
 						</Link>
 					</div>{" "}
-					<div className="flex justify-end max-lg:justify-center  mt-10 max-lg:order-1">
-						<img
-							className="w-[20%] border-2 max-lg:w-[30%]"
-							src={mainC}
-							alt=""
-						/>
-						<div className=" max-lg:mx-5 mx-10 flex items-center font-extrabold text-9xl max-lg:text-5xl ">
-							<p>+</p>
-						</div>{" "}
-						<img
-							className="w-[20%]  max-lg:w-[30%] border-2    "
-							src={grinder}
-							alt=""
-						/>
+					<div className="flex justify-end max-xl:justify-center  mt-10 max-lg:order-1 max-xl:flex-col">
+						<div className=" font-bold max-xl:text-center max mb-5">
+							<div>
+								<h4 className="text-xl  flex-[2]">
+									{" "}
+									מכונת הקפה פלוס מטחנת קפה מיקצועית
+								</h4>
+							</div>
+							<div>
+								<h3> BURR מטחנת קפה בטכנולוגיית</h3>
+							</div>
+							<div>
+								<h4>בעלת 15 שלביי טחינה</h4>
+							</div>
+							<div>
+								<h5>קנו עכשיו לחויית הקפה האולטימטיבית</h5>
+							</div>
+						</div>
+						<div className=" flex justify-center flex-[0.8]">
+							{" "}
+							<img
+								className="w-[20%] border-2 max-lg:w-[30%]"
+								src={mainC}
+								alt=""
+							/>
+							<div className=" max-lg:mx-5 mx-10 flex items-center font-extrabold text-9xl max-lg:text-5xl ">
+								<p>+</p>
+							</div>{" "}
+							<img
+								className="w-[20%]  max-lg:w-[30%] border-2    "
+								src={grinder}
+								alt=""
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
