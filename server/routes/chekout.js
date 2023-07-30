@@ -2,6 +2,7 @@ const fetch = require("node-fetch");
 
 async function chekout(req, res) {
 	const { name, phone, currentItem, amountOne, amountTwo } = await req.body;
+
 	try {
 		const requestBody = {
 			Key: process.env.zcredit,
@@ -86,8 +87,8 @@ async function chekout(req, res) {
 		);
 
 		const zCreditData = await zCreditResponse.json();
-
-		res.status(200).json({ sessionUrl: zCreditData.Data.SessionUrl });
+		console.log(zCreditData);
+		res.status(200).json({ sessionUrl: zCreditData });
 	} catch (error) {
 		console.error(error);
 		res.status(500).json({ error: "An error occurred." });
