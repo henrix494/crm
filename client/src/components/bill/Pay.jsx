@@ -53,17 +53,20 @@ export default function Pay() {
 				dispatch(setError("נא בחר אמצעי תשלום"));
 			} else {
 				if (typeOfPay === "visa") {
-					const zCredit = await fetch("http://localhost:3000/cheakout", {
-						method: "POST",
-						headers: { "Content-Type": "application/json " },
-						body: JSON.stringify({
-							phone: Fphone + phone,
-							currentItem: currentItem,
-							amountTwo: amountTwo,
-							amountOne: amountOne,
-							name: name,
-						}),
-					});
+					const zCredit = await fetch(
+						"https://crm-ten-iota.vercel.app/cheakout",
+						{
+							method: "POST",
+							headers: { "Content-Type": "application/json " },
+							body: JSON.stringify({
+								phone: Fphone + phone,
+								currentItem: currentItem,
+								amountTwo: amountTwo,
+								amountOne: amountOne,
+								name: name,
+							}),
+						}
+					);
 					const final = await zCredit.json();
 					console.log(final);
 					// window.open(final.sessionUrl);
