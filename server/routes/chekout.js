@@ -88,7 +88,7 @@ async function chekout(req, res) {
 
 		const zCreditData = await zCreditResponse.json();
 		console.log(zCreditData);
-		res.status(200).json({ sessionUrl: zCreditData, key: process.env.zcredit });
+		res.status(200).json({ sessionUrl: zCreditData });
 	} catch (error) {
 		console.error(error);
 		res.status(500).json({ error: "An error occurred." });
