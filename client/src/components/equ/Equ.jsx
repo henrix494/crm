@@ -74,24 +74,28 @@ export default function Equ() {
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
-						<div className=" self-center flex justify-around pt-10 max-lg:flex-col">
+						<div className=" self-center flex justify-around pt-10 max-lg:flex-col items-center">
 							<div>
 								{" "}
 								<img className=" w-[80vh]  rounded-xl" src={handle} alt="" />
 							</div>
 							<div>
-								<h4>ascasc</h4>
+								<h4 className="text-4xl  font-bold max-lg:text-2xl text-right max-lg:text-center max-lg:pt-10">
+									ידית חליטה איכותית להכנת קפה מושלם
+								</h4>
 							</div>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
-						<div className=" self-center flex justify-around pt-10 max-lg:flex-col">
+						<div className=" self-center flex justify-around pt-10 max-lg:flex-col items-center">
 							<div>
 								{" "}
 								<img className=" w-[80vh]  rounded-xl" src={brush} alt="" />
 							</div>
 							<div>
-								<h4>ascasc</h4>
+								<h4 className="text-4xl  font-bold max-lg:text-2xl text-right max-lg:text-center max-lg:pt-10">
+									מברשת איכותית לניקיון מכונת הקפה
+								</h4>
 							</div>
 						</div>
 					</SwiperSlide>
