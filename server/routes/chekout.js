@@ -44,8 +44,16 @@ async function chekout(req, res) {
 							? 1699
 							: 1499,
 					Currency: "ILS",
-					Name: "My Item1 Name",
-					Description: "My Item description , comes below the name",
+					Name:
+						currentItem === "/src/assets/doble.png" ||
+						currentItem === "/assets/doble-cec3014e.png"
+							? "מכונת קפה פלוס מטחנת קפה"
+							: " BRL 3605 מכונת קפה ",
+					Description:
+						currentItem === "/src/assets/doble.png" ||
+						currentItem === "/assets/doble-cec3014e.png"
+							? "חבילת קפה שכלול בה מכונת קפה שלנו פלוס מטכנת קפה לחווית קפה מושלמת"
+							: "מכונת קפה ידנית לחווית קםה מושלמת",
 					Quantity:
 						currentItem === "/src/assets/doble.png" ||
 						currentItem === "/assets/doble-cec3014e.png"
