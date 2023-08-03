@@ -107,6 +107,7 @@ export default function Contact() {
 								id="name"
 								name="name"
 								onChange={(e) => setName(e.target.value)}
+								value={name}
 							/>
 							<label htmlFor="name" className=" text-3xl font-bold">
 								{" "}
@@ -120,6 +121,7 @@ export default function Contact() {
 								type="text"
 								id="phone"
 								name="phone"
+								value={phone}
 								onChange={(e) => setPhone(e.target.value)}
 							/>
 							<label htmlFor="phone" className=" text-3xl font-bold">
