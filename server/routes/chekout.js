@@ -53,7 +53,7 @@ async function chekout(req, res) {
 						currentItem === "/src/assets/doble.png" ||
 						currentItem === "/assets/doble-cec3014e.png"
 							? "חבילת קפה שכלול בה מכונת קפה שלנו פלוס מטכנת קפה לחווית קפה מושלמת"
-							: "מכונת קפה ידנית לחווית קםה מושלמת",
+							: "מכונת קפה ידנית לחווית קפה מושלמת",
 					Quantity:
 						currentItem === "/src/assets/doble.png" ||
 						currentItem === "/assets/doble-cec3014e.png"
