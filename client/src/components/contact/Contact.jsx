@@ -4,6 +4,11 @@ import anotherBean from "../../assets/anotherbean.png";
 import bean from "../../assets/bean.png";
 import { Link } from "react-router-dom";
 export default function Contact() {
+	const date = new Date();
+	const day = date.getDate();
+	const month = date.getMonth() + 1;
+	const year = date.getFullYear();
+	const fullDate = `${day}/${month}/${year}`;
 	const [error, setError] = useState("");
 	const [upload, setUpLoad] = useState("");
 	const [name, setName] = useState("");
@@ -25,6 +30,7 @@ export default function Contact() {
 					body: JSON.stringify({
 						name: name,
 						phone: phone,
+						date: fullDate,
 					}),
 				}
 			);

@@ -9,6 +9,9 @@ const userInfo = new Schema({
 		type: Number,
 		required: [true, "מספר חובה"],
 	},
+	date: {
+		type: String,
+	},
 });
 
 const User = models.User || model("User", userInfo);
