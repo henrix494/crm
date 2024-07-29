@@ -1,0 +1,73 @@
+.first:hover::after {
+  content: "  המכונת קפה האיכותית שלנו באה ארוזה במשלוח עד הבית שלכם";
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  background-color: black;
+  bottom: 0;
+
+  transition: 5s all;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.secound:hover::after {
+  content: " טנק מים המכיל עד 1.7 ליטר מים";
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  background-color: black;
+  bottom: 0;
+
+  transition: 5s all;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.third:hover::after {
+  content: "  ידית חליטה איכותית להכנת קפה מושלם";
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  background-color: black;
+  bottom: 0;
+
+  transition: 5s all;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.brush:hover::after {
+  content: "  מברשת איכותית לניקיון מכונת הקפה";
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  background-color: black;
+  bottom: 0;
+
+  transition: 5s all;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.animation {
+  transition: all 0.5s ease-in;
+}
+
+.animationtest {
+  transition: all 1.5s ease-in-out !important;
+}
+
+@keyframes imgani {
+  0% {
+    top: 0px;
+  }
+
+  100% {
+    right: 500px;
+  }
+}
